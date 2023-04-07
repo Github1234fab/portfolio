@@ -1,0 +1,10 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+      height: 1200px;
+        display: flex;
+  flex-direction: column;
+}
