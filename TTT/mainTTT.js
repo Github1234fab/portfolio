@@ -138,3 +138,36 @@ function playGame(e) {
   }
 }
 
+// Enregistrement du plugin ScrollTrigger
+// gsap.registerPlugin(ScrollTrigger);
+
+// Définition de l'animation avec GSAP
+// gsap.to(".cube", {
+// // x: 400,
+//   duration: 3,
+//   scrollTrigger: {
+//     trigger: ".cube",
+//     start: "top center",
+//     end: "bottom center",
+//     markers: true,
+//     toggleClass : "recule"
+
+//   }
+// });
+
+// Enregistrement du plugin ScrollTrigger
+// gsap.registerPlugin(ScrollTrigger);
+
+// Définition de l'animation avec GSAP
+// gsap.to(".cube", {
+// // x: 400,
+//   duration: 3,
+//   scrollTrigger: {
+//     trigger: ".cube",
+//     start: "top center",
+//     end: "bottom center",
+//     markers: true,
+//     toggleClass : "recule"
+
+//   }
+// });

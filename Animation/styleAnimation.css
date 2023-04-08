@@ -1,11 +1,6 @@
-/* * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-} */
 
 .panorama_A {
-  width: 900px;
+  width: 800px;
   height: 500px;
   background: linear-gradient(rgb(4, 26, 98), rgb(119, 119, 249));
   margin: 20px auto;

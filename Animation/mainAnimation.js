@@ -1,5 +1,4 @@
 // creation des flocons de neige. 3 groupes de flocons pour jouer sur l'opacité. snowflake, snowflakeA, snowllakeB
-
 for (let i = 0; i < 100; i++) {
   var snowflake = document.createElement("div");
   var snowflakeA = document.createElement("div");
