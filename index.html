@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./Animation/styleAnimation.css" />
-    <link rel="stylesheet" href="./TTT/styleTTT.css" />
+    <link rel="stylesheet" href="./TTT/tic-tac-toe.css" />
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +16,11 @@
   </head>
   <body>
     <header>
-      <h1 class="title">PORTFOLIO</h1>
-      <nav></nav>
+      <div class="menu_container">
+      <div class="title"><h1>PORTFOLIO</h1></div>
+      <div class="menu"><i class="fa-solid fa-bars fa-xl"></i></div>
+      <!-- <nav></nav> -->
+      </div>
     </header> 
      <div class="portfolio_container">
       <div class="animation">
@@ -40,9 +43,9 @@
             <div class="moonCircle"></div>
             <div class="sunCircle"></div>
             <div class="tractor"><i class="fa-solid fa-2xl fa-tractor fa-flip-horizontal ;"></i></div>
-          </div>
+          </div> 
        
-      </div> 
+      </div>  
 
  <div class="tic_tac_toe"> 
  <div class="container">
@@ -68,18 +71,13 @@
       </div>
     </div>
       </div>
-
-      <!-- <div class="portfolio_buttons_actions">
-        <div class="start"></div>
-        <div class="stop"></div>
-      </div>
-    </div> -->
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/css-doodle@0.34.5/css-doodle.min.js"></script>
     <script src="./Animation/mainAnimation.js"></script>
-     <script src="./TTT/mainTTT.js"></script>
+     <script src="./TTT/tic-tac-toe.js"></script>
 
   </body>
 </html>
