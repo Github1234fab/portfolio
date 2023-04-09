@@ -16,7 +16,7 @@ header {
 .nav {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 300px;
   border-radius: 15px;
   padding: 15px;
   margin-top: 10px;
@@ -29,9 +29,9 @@ header {
 
 .a {
   visibility: hidden;
-  color: white;
+  color:  #ffffff;
   text-decoration: none;
-  font-family: oswald;
+  font-family: rubik pixels;
   font-size: 22px;
   text-shadow: 2px 2px 10px #f5caa4, -2px -2px 10px #9d6c41;
   word-spacing: 3px;

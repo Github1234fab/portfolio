@@ -18,6 +18,7 @@
   width: 290px;
   background: linear-gradient(rgb(40, 39, 39), rgb(31, 39, 145));
   box-shadow: 1px 1px 2px 1px black;
+  /* text-shadow: 0px 0px 20px white, 0px 0px 40px white; */
   color: rgb(238, 250, 5);
   font-size: 25px;
   text-align: right;
