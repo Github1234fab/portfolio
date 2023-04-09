@@ -270,3 +270,78 @@ pause(moon, 20);
 //   duration: 19,
 //   // repeat: -1,
 // });
+
+// commandes strat-stop ...............................................
+
+const stopButton = document.getElementById("stopButton");
+const startButton = document.getElementById("startButton");
+const restartButton = document.getElementById("restartButton");
+
+
+stopButton.addEventListener("click", stopAnimation);
+startButton.addEventListener("click", startAnimation);
+restartButton.addEventListener("click", restartAnimation);
+
+
+
+function stopAnimation() {
+  aniSnow.pause();
+  aniSnowA.pause();
+  aniSnowB.pause();
+  mountain.pause();
+  ciel.pause();
+  clouds.pause();
+  tmCar.pause();
+  tmPlane.pause();
+  tmMoon.pause();
+  tmSun.pause();
+  tmheadlights.pause();
+  tmTractor.pause();
+  tmMoto.pause();
+  tmheadlightsTractor.pause();
+  tmballLightTractor.pause();
+  sun.pause();
+  moon.pause();
+}
+
+function startAnimation() {
+  aniSnow.play();
+  aniSnowA.play();
+  aniSnowB.play();
+  mountain.play();
+  ciel.play();
+  clouds.play();
+  tmCar.play();
+  tmPlane.play();
+  tmMoon.play();
+  tmSun.play();
+  tmheadlights.play();
+  tmTractor.play();
+  tmMoto.play();
+  tmheadlightsTractor.play();
+  tmballLightTractor.play();
+  sun.play();
+   moon.play();
+}
+
+function restartAnimation() {
+  aniSnow.restart();
+  aniSnowA.restart();
+  aniSnowB.restart();
+  mountain.restart();
+  ciel.restart();
+  clouds.restart();
+  tmCar.restart();
+  tmPlane.restart();
+  tmMoon.restart();
+  tmSun.restart();
+  tmheadlights.restart();
+  tmTractor.restart();
+  tmMoto.restart();
+  tmheadlightsTractor.restart();
+  tmballLightTractor.restart();
+    sun.restart();
+    moon.restart();
+}
+
+console.log("ok")
