@@ -29,14 +29,17 @@ console.log(affiche);
 // Changement couleur aléatoire, fond de la calculatrice----------------------------------------------------------------------------------------------------------------------------------------------------
 
 document.querySelector("#CYB").addEventListener("click", CC);
-document.querySelector("#background");
+document.querySelector("#calculator_container");
 
 function CC () {
   let valeur1 = Math.floor(Math.random()*255);
   let valeur2= Math.floor(Math.random()*255);
   let valeur3 = Math.floor(Math.random()*255);
-  let codeCouleur = ("rgb("+ valeur1 + "," + valeur2 + "," + valeur3 + ")");
-  background.style.backgroundColor = codeCouleur;
+  let codeCouleur = ("rgb(" + valeur1 + "," + valeur2 + "," + valeur3 + ")");
+  let white = "white";
+  let pourcentage = "10%";
+  let gradient = `linear-gradient(to left, ${white}, ${pourcentage}, ${codeCouleur})`;
+  calculator_container.style.background = gradient;
 }
 
 function reset(){
