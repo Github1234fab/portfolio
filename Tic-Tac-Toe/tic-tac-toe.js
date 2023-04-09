@@ -30,7 +30,7 @@ let gameIsOn = false;
 power.addEventListener("click", () => {
   gameIsOn = !gameIsOn;
   power.style.color = gameIsOn ? "blue" : "yellow";
-  if (power.style.color === "blue") {
+  if (power.style.color === "yellow") {
     reload.classList.add("hidden_reload");
     gameState.classList.add("hidden_reload");
     score.classList.add("hidden_reload");

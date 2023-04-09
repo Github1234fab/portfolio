@@ -328,26 +328,26 @@ function startAnimation() {
 }
 
 function restartAnimation() {
-  aniSnow.restart();
-  aniSnowA.restart();
-  aniSnowB.restart();
-  mountain.restart();
-  ciel.restart();
-  clouds.restart();
-  tmCar.restart();
-  tmPlane.restart();
-  tmMoon.restart();
-  tmSun.restart();
-  tmheadlights.restart();
-  tmTractor.restart();
-  tmMoto.restart();
-  tmheadlightsTractor.restart();
-  tmballLightTractor.restart();
-  sun.restart();
-  moon.restart();
-  headLights.restart();
-  headLightsTractor.restart();
-  ballLight_tractor.restart();
+   aniSnow.seek(0);
+   aniSnowA.seek(0);
+   aniSnowB.seek(0);
+   mountain.seek(0);
+   ciel.seek(0);
+   clouds.seek(0);
+   tmCar.seek(0);
+   tmPlane.seek(0);
+   tmMoon.seek(0);
+   tmSun.seek(0);
+   tmheadlights.seek(0);
+   tmTractor.seek(0);
+   tmMoto.seek(0);
+   tmheadlightsTractor.seek(0);
+   tmballLightTractor.seek(0);
+   sun.seek(0);
+  moon.seek(0);
+  //  headLights.seek(0);
+  //  headLightsTractor.seek(0);
+  //  ballLight_tractor.seek(0);
+
 }
 
-console.log("ok");
