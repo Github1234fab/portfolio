@@ -103,6 +103,7 @@
   background: linear-gradient(black, grey);
   box-shadow: 1px 1px 5px 1px black;
   font-family: orbitron;
+  margin-top: 10px;
 } 
 
 #initialize:hover {
