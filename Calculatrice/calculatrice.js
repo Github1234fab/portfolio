@@ -38,7 +38,7 @@ function CC () {
   let codeCouleur = ("rgb(" + valeur1 + "," + valeur2 + "," + valeur3 + ")");
   let white = "white";
   let pourcentage = "10%";
-  let gradient = `linear-gradient(to left, ${white}, ${pourcentage}, ${codeCouleur})`;
+  let gradient = `linear-gradient(to left, ${white}, ${pourcentage}, ${codeCouleur})`; 
   calculator_container.style.background = gradient;
 }
 

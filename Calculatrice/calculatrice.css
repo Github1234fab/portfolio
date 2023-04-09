@@ -1,19 +1,15 @@
-
-
 #calculator_container {
   display: flex;
   flex-direction: column;
   position: relative;
   height: 510px;
   margin-top: 50px;
-  background-color:rgb(31, 39, 145);
-  transition: .700s ease-in-out;
   border-radius: 20px;
   pointer-events: none;
-
+  transition: linear-gradient 1s ease-in-out;
 }
 
- #ecran {
+#ecran {
   position: absolute;
   left: 10px;
   top: 15px;
@@ -31,8 +27,7 @@
   border-radius: 10px;
   padding: 10px;
   font-weight: 100;
-} 
-
+}
 
 #container_calculatrice {
   grid-column: 2/3;
@@ -40,10 +35,9 @@
   margin-top: 100px;
   text-align: center;
   z-index: 1;
-} 
+}
 
- #boutons {
-
+#boutons {
   margin-top: 0px;
   padding: 10px;
   display: grid;
@@ -59,7 +53,7 @@
   grid-gap: 6px;
 }
 
- .bouton {
+.bouton {
   pointer-events: auto;
   color: white;
   gap: 10px;
@@ -71,16 +65,16 @@
   font-size: 15px;
 }
 .bouton:hover {
-   pointer-events: auto;
+  pointer-events: auto;
   border: solid 2px red;
   color: white;
   gap: 10px;
   background: linear-gradient(red, grey);
   box-shadow: 1px 1px 5px 1px black;
-} 
+}
 
 #egal {
-   pointer-events: auto;
+  pointer-events: auto;
   color: white;
   gap: 10px;
   height: 70px;
@@ -94,8 +88,8 @@
   background: linear-gradient(rgb(53, 53, 184), grey);
 }
 
- #initialize {
-   pointer-events: auto;
+#initialize {
+  pointer-events: auto;
   color: white;
   gap: 10px;
   height: 70px;
@@ -104,7 +98,7 @@
   box-shadow: 1px 1px 5px 1px black;
   font-family: orbitron;
   margin-top: 10px;
-} 
+}
 
 #initialize:hover {
   background: linear-gradient(yellow, grey);
@@ -119,5 +113,4 @@
   background: linear-gradient(black, grey);
   box-shadow: 1px 1px 5px 1px black;
   font-family: orbitron;
-} 
-
+}
