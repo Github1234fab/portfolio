@@ -5,7 +5,7 @@
 }
 body {
   height: 100vh;
-  background-color: #f4a460;
+  background: linear-gradient(to left, #f5c8a0, 45% , #f4a460);
 }
 header {
   display: flex;

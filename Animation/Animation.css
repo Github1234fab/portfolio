@@ -174,10 +174,10 @@
 
 .headlights_tractor {
   color: rgb(173, 194, 243);
-  filter: blur(4px);
+  filter: blur(7px);
   position: absolute;
-  top: 490px;
-  right: 2px;
+  top: 480px;
+  right: 5px;
   rotate: -30(deg);
   /* left: 100%; */
   transform: rotate(340deg);
@@ -192,7 +192,7 @@
   background-color: yellow;
   filter: blur(4px);
   position: absolute;
-  top: 460px;
+  top: 455px;
   right: -32px;
   z-index: 9999;
   scale: 1.4;

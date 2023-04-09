@@ -237,7 +237,7 @@ let plane = tmPlane
     gsap.to(".plane", {
       x: 800,
       y: -500,
-      duration: 22,
+      duration: 45,
       transform: "rotate(-30deg)",
       ease: "power3",
       scale: 0.2,
@@ -260,7 +260,7 @@ pause(sun, 33);
 
 let moon = tmMoon.to(".moonCircle", {
   rotation: 180,
-  duration: 24,
+  duration: 29,
   repeat: -1,
 });
 pause(moon, 20);
@@ -277,12 +277,9 @@ const stopButton = document.getElementById("stopButton");
 const startButton = document.getElementById("startButton");
 const restartButton = document.getElementById("restartButton");
 
-
 stopButton.addEventListener("click", stopAnimation);
 startButton.addEventListener("click", startAnimation);
 restartButton.addEventListener("click", restartAnimation);
-
-
 
 function stopAnimation() {
   aniSnow.pause();
@@ -302,6 +299,9 @@ function stopAnimation() {
   tmballLightTractor.pause();
   sun.pause();
   moon.pause();
+  headLights.pause();
+  headLightsTractor.pause();
+  ballLight_tractor.pause();
 }
 
 function startAnimation() {
@@ -321,7 +321,10 @@ function startAnimation() {
   tmheadlightsTractor.play();
   tmballLightTractor.play();
   sun.play();
-   moon.play();
+  moon.play();
+  headLights.play();
+  headLightsTractor.play();
+  ballLight_tractor.play();
 }
 
 function restartAnimation() {
@@ -340,8 +343,11 @@ function restartAnimation() {
   tmMoto.restart();
   tmheadlightsTractor.restart();
   tmballLightTractor.restart();
-    sun.restart();
-    moon.restart();
+  sun.restart();
+  moon.restart();
+  headLights.restart();
+  headLightsTractor.restart();
+  ballLight_tractor.restart();
 }
 
-console.log("ok")
+console.log("ok");
