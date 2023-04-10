@@ -15,14 +15,14 @@ body {
 .home_title {
   font-size: 75px;
   font-family: oswald;
-  word-spacing: 20px;
+  letter-spacing: 5px;
   margin-left: 20px;
 }
 .home_name {
   font-size: 35px;
   font-family: oswald;
   letter-spacing: 35px;
-  margin-left: 20px;
+  margin-left: 22px;
 }
 
 .carousel-img {
@@ -41,31 +41,33 @@ body {
   width: 100%;
 }
 .home_about {
-  width: 300px;
+  width: 400px;
   margin-top: 70px;
   margin-left: 70px;
   margin-bottom: 30px;
 }
-.home_about h3 {
-  font-size: 12px;
-  margin-top: 20px;
-}
+
 .home_about h2 {
   font-size: 35px;
   font-family: oswald;
   letter-spacing: 15px;
   color: white;
 }
+.home_about h3 {
+  font-size: 12px;
+  margin-top: 20px;
+  font-weight: 400;
+}
 .home_menu {
   margin-top: 110px;
-  margin-left: 200px;
+  margin-left: 160px;
 }
 .home_nav {
   display: flex;
   flex-direction: column;
 }
 .home_a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-family: oswald;
   font-family: poppins;
@@ -78,6 +80,12 @@ body {
   font-size: 24px;
   letter-spacing: 15px;
 }
+/* .electric_line{
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    margin-top: 30px;
+} */
 .projects {
   background-color: rgb(9, 8, 8);
   background: url(../assets/Capture\ d’écran\ 2023-04-10\ à\ 12.25.08.png);
@@ -85,32 +93,28 @@ body {
   height: 150px;
   width: 150px;
   opacity: 0.5;
-  transition: opacity .700s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
   color: white;
   font-family: oswald;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.projects:hover{
-    opacity: 1;
+.projects:hover {
+  opacity: 1;
 }
 .projects_grid {
-    gap: 2px;
-    margin-top: 30px;
-    display: grid;
+  gap: 2px;
+  margin-top: 30px;
+  display: grid;
   height: 600px;
   width: 100%;
   background-color: rgb(255, 255, 255);
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: 
-  "projects, projects, projects, projects, projects",
-  "projects, projects, projects, projects, projects"
-  "projects, projects, projects, projects, projects";
-  
+  grid-template-areas: "projects, projects, projects, projects, projects", "projects, projects, projects, projects, projects" "projects, projects, projects, projects, projects";
 }
-.container_projects_grid{
-    display: flex;
-    justify-content: center;
+.container_projects_grid {
+  display: flex;
+  justify-content: center;
 }
