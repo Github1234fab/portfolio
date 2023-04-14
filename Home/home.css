@@ -60,7 +60,7 @@ body {
 }
 .home_menu {
   margin-top: 110px;
-  margin-left: 160px;
+  margin-left: 110px;
 }
 .home_nav {
   display: flex;
@@ -82,23 +82,25 @@ body {
 }
 
 .electric_line {
-    position: absolute;
-    top: 190px;
-    height: 1px;
-    width: 1px;
-    background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 180px;
+  height: 1px;
+  width: 1px;
+  background-color: rgb(255, 255, 255);
 }
 
 .spark {
   position: absolute;
-  top: 180px;
-  left: 0px;
-  left: -22px;
+  top: 155px;
+  left: -55px;
+  color: rgb(255, 255, 255);
+  transform: rotate(-90deg);
+  height: 50px;
+  /* left: -22px;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  background: linear-gradient(to left, yellow, 40%,  orange);
-
+  border-radius: 50%; */
+  /* background: linear-gradient(to left, yellow, 40%,  orange); */
 }
 
 .projects {
@@ -132,4 +134,17 @@ body {
 .container_projects_grid {
   display: flex;
   justify-content: center;
+}
+
+.container_bubbles {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.bubble {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: orange;
 }
