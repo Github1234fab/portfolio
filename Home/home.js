@@ -8,32 +8,48 @@ const tmSpark = gsap.timeline();
 
 
 gsap.to(".electric_line", {
-  duration: 2,
+  duration: 4,
   width: "100%",
   ease: "linear",
   onComplete: function () {
     gsap.to(".electric_line", {
-      duration: 3,
-      x: "+=900px",
+      duration: 5,
+      x: "+=" + window.innerWidth,
       ease: "linear",
     });
   },
 });
 
-gsap.to(".spark", {
-  duration: 3,
-  x: "+=900px",
+gsap.to(".spark",{
+  duration: 5,
+  x: "+=" + window.innerWidth,
   ease: "linear",
-  delay: 2,
+  delay: 4,
 });
-  gsap.fromTo(
-    ".spark", {
-      duration: 0.2,
-      opacity: 1,
-      repeat: -1,
-      yoyo: true,
-    }
-  );
+gsap.to(".spark", {
+  duration: 0.2,
+  opacity: 0.5,
+  ease: Power2,
+  scale: 1.4,
+  repeat: -1,
+  yoyo: true
+})
+gsap.to(".spark2", {
+  duration: 5,
+  x: "+=" + window.innerWidth,
+  ease: "linear",
+  delay: 4,
+});
+gsap.to(".spark2", {
+  duration: 0.1,
+  opacity: 0.8,
+  ease: Power4,
+  scale: 1.4,
+  repeat: -1,
+  yoyo: true,
+});
+
+
  
 //   let containerBubbles = document.getElementById("container_bubbles");
 // console.log(containerBubbles);
