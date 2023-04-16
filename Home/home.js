@@ -3,29 +3,23 @@
 // console.log(electricLine);
 // console.log(spark);
 
-let cursor = document.querySelector('.cursor');
+let cursor = document.querySelector(".cursor");
 console.log(cursor);
 
-document.addEventListener("mousemove", e => {
-  cursor.setAttribute("style", "top:"+(e.pageY - 10)+"px; left:" + (e.pageX - 10)+"px;")
-})
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute("style", "top:" + (e.pageY - 10) + "px; left:" + (e.pageX - 10) + "px;");
+});
 
 document.addEventListener("click", () => {
   cursor.classList.add("cursor_animation");
 
   setTimeout(() => {
     cursor.classList.remove("cursor_animation");
-  }, 700);
-
+  }, 100);
 });
-
-
-
-
 
 // const tmLine = gsap.timeline();
 // const tmSpark = gsap.timeline();
-
 
 // gsap.to(".electric_line", {
 //   duration: 4,
@@ -69,7 +63,6 @@ document.addEventListener("click", () => {
 //   yoyo: true,
 // });
 
-
 // const white = document.querySelectorAll(".white");
 
 // setTimeout(() => {
@@ -77,10 +70,8 @@ document.addEventListener("click", () => {
 //  black.classList.add("white")
 // }, 2000);
 
- 
 //   let containerBubbles = document.getElementById("container_bubbles");
 // console.log(containerBubbles);
-
 
 // for (let i = 0; i < 35; i++){
 //   let bubble = document.createElement("div");
@@ -102,4 +93,3 @@ document.addEventListener("click", () => {
 //      }
 //    }, interval);
 //   }
- 
