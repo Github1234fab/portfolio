@@ -3,52 +3,79 @@
 // console.log(electricLine);
 // console.log(spark);
 
-const tmLine = gsap.timeline();
-const tmSpark = gsap.timeline();
+let cursor = document.querySelector('.cursor');
+console.log(cursor);
 
-
-gsap.to(".electric_line", {
-  duration: 4,
-  width: "100%",
-  ease: "linear",
-  onComplete: function () {
-    gsap.to(".electric_line", {
-      duration: 5,
-      x: "+=" + window.innerWidth,
-      ease: "linear",
-    });
-  },
-});
-
-gsap.to(".spark",{
-  duration: 5,
-  x: "+=" + window.innerWidth,
-  ease: "linear",
-  delay: 4,
-});
-gsap.to(".spark", {
-  duration: 0.2,
-  opacity: 0.5,
-  ease: Power2,
-  scale: 1.4,
-  repeat: -1,
-  yoyo: true
+document.addEventListener("mousemove", e => {
+  cursor.setAttribute("style", "top:"+(e.pageY - 10)+"px; left:" + (e.pageX - 10)+"px;")
 })
-gsap.to(".spark2", {
-  duration: 5,
-  x: "+=" + window.innerWidth,
-  ease: "linear",
-  delay: 4,
-});
-gsap.to(".spark2", {
-  duration: 0.1,
-  opacity: 0.8,
-  ease: Power4,
-  scale: 1.4,
-  repeat: -1,
-  yoyo: true,
+
+document.addEventListener("click", () => {
+  cursor.classList.add("cursor_animation");
+
+  setTimeout(() => {
+    cursor.classList.remove("cursor_animation");
+  }, 700);
+
 });
 
+
+
+
+
+// const tmLine = gsap.timeline();
+// const tmSpark = gsap.timeline();
+
+
+// gsap.to(".electric_line", {
+//   duration: 4,
+//   width: "100%",
+//   ease: "linear",
+//   onComplete: function () {
+//     gsap.to(".electric_line", {
+//       duration: 5,
+//       x: "+=" + window.innerWidth,
+//       ease: "linear",
+//     });
+//   },
+// });
+
+// gsap.to(".spark",{
+//   duration: 5,
+//   x: "+=" + window.innerWidth,
+//   ease: "linear",
+//   delay: 4,
+// });
+// gsap.to(".spark", {
+//   duration: 0.2,
+//   opacity: 0.5,
+//   ease: Power2,
+//   scale: 1.4,
+//   repeat: -1,
+//   yoyo: true
+// })
+// gsap.to(".spark2", {
+//   duration: 5,
+//   x: "+=" + window.innerWidth,
+//   ease: "linear",
+//   delay: 4,
+// });
+// gsap.to(".spark2", {
+//   duration: 0.1,
+//   opacity: 0.8,
+//   ease: Power4,
+//   scale: 1.4,
+//   repeat: -1,
+//   yoyo: true,
+// });
+
+
+// const white = document.querySelectorAll(".white");
+
+// setTimeout(() => {
+//   const black = document.querySelector(".home_title");
+//  black.classList.add("white")
+// }, 2000);
 
  
 //   let containerBubbles = document.getElementById("container_bubbles");
