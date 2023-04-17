@@ -18,6 +18,49 @@ document.addEventListener("click", () => {
   }, 100);
 });
 
+let up = document.querySelector(".up");
+let down = document.querySelector(".down");
+let nav = document.querySelector(".home_nav");
+const container = document.querySelector(".container_nav");
+
+nav.style.top = "0px";
+
+let intervalId;
+
+function moveUp(e) {
+  nav.style.top = parseInt(nav.style.top) - 10 + "px";
+  console.log("up"); 
+}
+
+function moveDown() {
+  nav.style.top = parseInt(nav.style.top) + 10 + "px";
+  console.log("down");
+}
+
+up.addEventListener("mousedown", () => {
+  intervalId = setInterval(moveUp, 100);
+});
+
+down.addEventListener("mousedown", () => {
+  intervalId = setInterval(moveDown, 100);
+});
+
+document.addEventListener("mouseup", () => {
+  clearInterval(intervalId);
+});
+
+
+console.log(nav.parentElement);
+
+
+
+
+
+
+
+
+
+
 // const tmLine = gsap.timeline();
 // const tmSpark = gsap.timeline();
 

@@ -42,7 +42,7 @@ body {
     border: dashed 3px white;
     transform: rotate(180deg);
     transform: scale(1.5);
-    box-shadow: 0px 0px 20px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255), 0px 0px 60px rgb(255, 255, 255), 0px 0px 80px rgb(255, 255, 255), 0px 0px 100px rgb(255, 255, 255);
   }
   100% {
     border: solid 3px white;
@@ -121,34 +121,35 @@ body {
   margin-top: 10px;
   color: rgb(0, 0, 0);
 }
-
 .home_menu {
-  display: flex;
-  flex-direction: column;
-  margin-top: 35px;
-  margin-left: 140px;
-  width: 100px;
+  height: 50px;
 }
-.home_menuTitle {
-  color: white;
-  font-family: poppins;
-  font-size: 24px;
-  letter-spacing: 10px;
-  font-weight: 400;
+.container_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: transparent;
+  box-shadow: inset -3px 4px 4px rgb(2, 2, 40), inset 3px 2px 4px rgb(4, 4, 39);
+  padding: 10px;
+  position: relative;
 }
 .home_nav {
+  height: 40px;
+  width: 40px;
+  top: 0px;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  background-color: white;
-  box-shadow: inset -3px 4px 4px rgb(2, 2, 40), inset 3px 2px 4px rgb(4, 4, 39);
+  transition: top 0.7s ease-out;
 }
 .home_a {
-  color: blue;
+  color: rgb(252, 252, 252);
   text-decoration: none;
   font-family: lato;
   font-size: 14px;
@@ -156,15 +157,21 @@ body {
   transition: 0.2s ease-in-out;
 }
 .home_a:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(251, 251, 251);
   text-decoration: none;
   font-family: lato;
-  font-size: 16px;
   text-align: justify;
   transform: scale(1.1);
   transform: translateX(5px);
 }
-
+.up,
+.down {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  text-shadow: 0px 0px 20px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255), 0px 0px 60px rgb(255, 255, 255), 0px 0px 80px rgb(255, 255, 255), 0px 0px 100px rgb(255, 255, 255);
+}
 .carousel-img {
   max-width: 50%;
   height: auto;
@@ -176,7 +183,6 @@ body {
   margin-top: 60px;
   margin-left: 40px;
 }
-
 .electric_line {
   position: absolute;
   top: 175px;
