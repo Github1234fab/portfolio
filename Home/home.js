@@ -1,7 +1,4 @@
-// let electricLine = document.getElementById("electricLine");
-// let spark = document.getElementById("spark");
-// console.log(electricLine);
-// console.log(spark);
+//CURSEUR PERSONNALISÉ..........................................
 
 let cursor = document.querySelector(".cursor");
 console.log(cursor);
@@ -18,23 +15,26 @@ document.addEventListener("click", () => {
   }, 100);
 });
 
+//POSITION ET ANIMATION DU MENU..........................................
+
 let up = document.querySelector(".up");
 let down = document.querySelector(".down");
 let nav = document.querySelector(".home_nav");
 const container = document.querySelector(".container_nav");
-
-nav.style.top = "0px";
+container.style.position = "relative";
 
 let intervalId;
 
 function moveUp(e) {
-  nav.style.top = parseInt(nav.style.top) - 10 + "px";
-  console.log("up"); 
+  let containerHeight = container.offsetHeight;
+  let navTop = parseInt(getComputedStyle(nav).top);
+  nav.style.top = Math.max(navTop - 10, -containerHeight + 100) + "px";
 }
 
 function moveDown() {
-  nav.style.top = parseInt(nav.style.top) + 10 + "px";
-  console.log("down");
+  let containerHeight = container.offsetHeight;
+  let navTop = parseInt(getComputedStyle(nav).top);
+  nav.style.top = Math.min(navTop + 10, 0) + "px";
 }
 
 up.addEventListener("mousedown", () => {
@@ -49,7 +49,6 @@ document.addEventListener("mouseup", () => {
   clearInterval(intervalId);
 });
 
-
 console.log(nav.parentElement);
 
 
@@ -61,6 +60,12 @@ console.log(nav.parentElement);
 
 
 
+
+
+// let electricLine = document.getElementById("electricLine");
+// let spark = document.getElementById("spark");
+// console.log(electricLine);
+// console.log(spark);
 // const tmLine = gsap.timeline();
 // const tmSpark = gsap.timeline();
 
