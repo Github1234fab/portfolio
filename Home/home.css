@@ -3,10 +3,11 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body,
-html {
+body{
   cursor: none;
   background-color: blue !important;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* CURSEUR PERSONNALISÉ..................................... */
@@ -56,79 +57,78 @@ html {
 }
 
 /* HEADER..................................... */
-.portfolio {
-  margin-top: auto;
-  align-items: center;
-}
-.titles_container {
+
+.header {
   display: flex;
   width: 100%;
   flex-direction: column;
+  height: 150px;
 }
 
-.home_title {
+.header_title {
   font-size: 75px;
   font-family: oswald;
   letter-spacing: -10px;
   margin-left: 20px;
+  margin-top: 30px;
 }
-.home_title span {
+.header_title span {
   transition: color 0.1s;
 }
-.home_title span:hover {
+.header_title span:hover {
   color: white;
 }
 
-.home_name {
+.header_name {
   font-size: 35px;
   font-family: oswald;
   letter-spacing: 32px;
   margin-left: 22px;
   letter-spacing: 10px;
   font-weight: 200;
+  margin-top: -10px;
 }
-.home_name span {
+.header_name span {
   transition: color 0.1s;
 }
-.home_name span:hover {
+.header_name span:hover {
   color: white;
 }
-.home_name span:nth-child(7) {
+.header_name span:nth-child(7) {
   margin-right: 20px;
 }
 
-/* HEADER PRÉSENTATION..................................... */
+/* MAIN..................................... */
 
-.home_bienvenue_nav {
-  display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
-  grid-template-areas: "home_about home_menu";
+.main {
+  display: flex;
+  /* height: 100vh; */
 }
-/* HEADER ABOUT.................................... */
 
-.home_about {
+/*ABOUT.................................... */
+
+.main_about {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
 }
-.home_about_h2 {
+.main_about_h2 {
   font-weight: 100;
   font-size: 30px;
   font-family: lato;
   letter-spacing: 15px;
   color: rgb(255, 255, 255);
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 20px;
   font-weight: 200;
 }
-.home_about_h2 span {
+.main_about_h2 span {
   transition: color 0.1s;
 }
-.home_about_h2 span:hover {
+.main_about_h2 span:hover {
   color: black;
 }
-.home_about_h3 {
+.main_about_h3 {
   opacity: 0.5;
   color: rgb(2, 2, 30);
   font-size: 6px;
@@ -139,34 +139,33 @@ html {
   line-height: 20px;
   transition: 1s ease-in-out;
   word-spacing: 1px;
-  margin-top: 30px;
   box-shadow: none;
 }
-.home_about_h3:hover {
+.main_about_h3:hover {
   opacity: 1;
   font-weight: 300;
   color: rgb(255, 255, 255);
   background: radial-gradient(circle, rgb(31, 31, 158), 40%, black);
   box-shadow: 2px 2px 3px black;
-  padding: 50px;
+  padding: 20px;
   border-radius: 1px;
   font-size: 13px;
+  width: 100%;
 }
 
-/* HEADER NAV.................................... */
-.home_menu {
-  display: flex;
-  /* width: 100%; */
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
+/* NAV.................................... */
+
+
+.main_nav {
+  display: flex; 
 }
-.container_menuButtons {
+.container_navButtons {
   display: flex;
   flex-direction: row;
   width: 80px;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   margin-left: 20px;
+  margin-top: 30px;
 }
 .down,
 .up {
@@ -181,9 +180,10 @@ html {
   cursor: none;
 }
 .container_nav {
-  position: relative;
-  height: 100px;
-  width: 100px;
+  margin-top: 60px;
+  margin-left: 70px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   overflow: hidden;
   border: solid black 1px;
@@ -193,18 +193,16 @@ html {
   align-items: center;
   justify-content: center;
 }
-.home_nav {
-  height: 100px;
+.nav {
+  /* height: 100px; */
   display: flex;
   justify-content: left;
   margin-top: -50px;
   margin-bottom: 50px;
-  /* position: absolute; */
   flex-direction: column;
   transition: 0.9s ease-out;
-  /* top: 0px; */
 }
-.home_a {
+.nav_a {
   color: rgb(69, 69, 252);
   text-decoration: none;
   font-family: lato;
@@ -212,7 +210,7 @@ html {
   text-align: left;
   transition: 0.2s ease-in-out;
 }
-.home_a:hover {
+.nav_a:hover {
   color: rgb(251, 251, 251);
   text-decoration: none;
   font-family: lato;
@@ -223,7 +221,28 @@ html {
 
 /* PROJETS..................................... */
 
-.carousel-img {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .carousel-img {
   max-width: 50%;
   height: auto;
   margin: auto;
@@ -264,17 +283,17 @@ html {
   height: 150px;
   width: 150px;
   /* opacity: 0.5; */
-  transition: opacity 0.7s ease-in-out;
+  /* transition: opacity 0.7s ease-in-out;
   color: white;
   font-family: oswald;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.projects:hover {
+} */
+/* .projects:hover {
   opacity: 1;
-}
-.projects_grid {
+} */
+/* .projects_grid {
   gap: 2px;
   margin-top: 30px;
   display: grid;
@@ -287,9 +306,9 @@ html {
 .container_projects_grid {
   display: flex;
   justify-content: center;
-}
+} */
 
-.container_bubbles {
+/* .container_bubbles {
   display: flex;
   width: 100%;
   margin-top: 40px;
@@ -300,4 +319,4 @@ html {
   width: 10px;
   border-radius: 50%;
   background-color: orange;
-}
+}  */
