@@ -3,9 +3,9 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body {
+body,
+html {
   cursor: none;
-  height: 100vh;
   background-color: blue !important;
 }
 
@@ -56,7 +56,10 @@ body {
 }
 
 /* HEADER..................................... */
-
+.portfolio {
+  margin-top: auto;
+  align-items: center;
+}
 .titles_container {
   display: flex;
   width: 100%;
@@ -128,7 +131,7 @@ body {
 .home_about_h3 {
   opacity: 0.5;
   color: rgb(2, 2, 30);
-  font-size: 12px;
+  font-size: 6px;
   font-weight: 300;
   text-align: justify;
   font-family: lato;
@@ -137,21 +140,23 @@ body {
   transition: 1s ease-in-out;
   word-spacing: 1px;
   margin-top: 30px;
+  box-shadow: none;
 }
 .home_about_h3:hover {
   opacity: 1;
   font-weight: 300;
   color: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgb(7, 7, 98), 40%, black);
+  background: radial-gradient(circle, rgb(31, 31, 158), 40%, black);
+  box-shadow: 2px 2px 3px black;
   padding: 50px;
-  border-radius: 5px;
-  margin: auto;
+  border-radius: 1px;
+  font-size: 13px;
 }
 
 /* HEADER NAV.................................... */
 .home_menu {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
   justify-content: center;
   margin-top: 50px;
@@ -159,7 +164,7 @@ body {
 .container_menuButtons {
   display: flex;
   flex-direction: row;
-  width: 50px;
+  width: 80px;
   justify-content: space-around;
   margin-left: 20px;
 }
@@ -177,30 +182,31 @@ body {
 }
 .container_nav {
   position: relative;
-  height: 110px;
-  width: 110px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   overflow: hidden;
   border: solid black 1px;
-  background-color: rgb(4, 4, 56);
+  background-color: rgb(14, 14, 113);
   box-shadow: inset -3px 4px 4px rgb(2, 2, 40), inset 3px 2px 4px rgb(4, 4, 39);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .home_nav {
+  height: 100px;
   display: flex;
   justify-content: left;
   margin-left: -20px;
   margin-top: -50px;
   margin-bottom: 50px;
-  position: absolute;
+  /* position: absolute; */
   flex-direction: column;
   transition: 0.9s ease-out;
-  top: 0px;
+  /* top: 0px; */
 }
 .home_a {
-  color: rgb(246, 246, 246);
+  color: rgb(69, 69, 252);
   text-decoration: none;
   font-family: lato;
   font-size: 14px;

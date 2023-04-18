@@ -37,33 +37,37 @@ let intervalId;
 //   nav.style.top = Math.min(navTop + 30, 0) + "px";
 // }
 
+
+let navTop = 0;
 function moveUp(e) {
   // let navTop = parseInt(getComputedStyle(nav).top);
-  nav.style.marginTop = "-10px";
+  navTop += 30;
+  nav.style.marginTop = navTop + "px";
 }
 
 
 function moveDown(e) {
   // let navTop = parseInt(getComputedStyle(nav).top);
   // nav.style.top = navTop + 30 + "px";
-   nav.style.marginTop = "10px";
+  navTop -= 30;
+   nav.style.marginTop = navTop + "px";
 }
 
 up.addEventListener("mousedown", () => {
-  // intervalId = setInterval(moveUp, 100);
+
   moveUp()
 });
 
 down.addEventListener("mousedown", () => {
-  // intervalId = setInterval(moveDown, 100);
+
   moveDown();
 });
 
-document.addEventListener("mouseup", () => {
-  clearInterval(intervalId);
-});
+// document.addEventListener("mouseup", () => {
+//   clearInterval(intervalId);
+// });
 
-console.log(nav.parentElement);
+// console.log(nav.parentElement);
 
 //ANIMATION BIENVENUE..........................................
 
