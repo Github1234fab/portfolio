@@ -28,13 +28,13 @@ let intervalId;
 function moveUp(e) {
   let containerHeight = container.offsetHeight;
   let navTop = parseInt(getComputedStyle(nav).top);
-  nav.style.top = Math.max(navTop - 10, -containerHeight + 100) + "px";
+  nav.style.top = Math.max(navTop - 50, -containerHeight + 100) + "px";
 }
 
 function moveDown() {
   let containerHeight = container.offsetHeight;
   let navTop = parseInt(getComputedStyle(nav).top);
-  nav.style.top = Math.min(navTop + 10, 0) + "px";
+  nav.style.top = Math.min(navTop + 50, 0) + "px";
 }
 
 up.addEventListener("mousedown", () => {
@@ -50,6 +50,26 @@ document.addEventListener("mouseup", () => {
 });
 
 console.log(nav.parentElement);
+
+//ANIMATION BIENVENUE..........................................
+
+let homeAboutH3 = document.querySelector(".home_about_h3 ");
+let susPoints = document.querySelector(".sus_points");
+
+susPoints.addEventListener("click", () => {
+  susPoints.classList.add("sus_points_hidden");
+  homeAboutH3.classList.add("home_about_h3_visible");
+});
+
+homeAboutH3.addEventListener("click", () => {
+  susPoints.classList.add("sus_points_visible");
+  homeAboutH3.classList.add("home_about_remove");
+});
+
+
+
+
+
 
 
 
