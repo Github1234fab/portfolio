@@ -45,12 +45,7 @@ body {
     border: dashed 2px white;
     transform: rotate(180deg);
     transform: scale(2);
-    box-shadow: 
-    0px 0px 20px rgb(255, 255, 255), 
-    0px 0px 40px rgb(255, 255, 255), 
-    0px 0px 60px rgb(255, 255, 255), 
-    0px 0px 80px rgb(255, 255, 255), 
-    0px 0px 100px rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255), 0px 0px 60px rgb(255, 255, 255), 0px 0px 80px rgb(255, 255, 255), 0px 0px 100px rgb(255, 255, 255);
   }
   100% {
     border: solid 3px white;
@@ -105,9 +100,6 @@ body {
   display: grid;
   grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
   grid-template-areas: "home_about home_menu";
-  width: 100%;
-  align-items: center;
-  justify-content: center;
 }
 /* HEADER ABOUT.................................... */
 
@@ -115,48 +107,46 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
-  margin-left: 25px;
-  height: 400px;
-  position: relative;
+  justify-content: space-around;
 }
-.home_about h2 {
+.home_about_h2 {
   font-weight: 100;
   font-size: 30px;
   font-family: lato;
-  letter-spacing: 25px;
+  letter-spacing: 15px;
   color: rgb(255, 255, 255);
   margin-top: 20px;
+  margin-left: 20px;
   font-weight: 200;
+}
+.home_about_h2 span {
+  transition: color 0.1s;
+}
+.home_about_h2 span:hover {
+  color: black;
 }
 .home_about_h3 {
   opacity: 0.5;
-   position: absolute;
-  top: 90px;
-  left: 0px;
   color: rgb(2, 2, 30);
   font-size: 12px;
   font-weight: 300;
   text-align: justify;
   font-family: lato;
-  width: 370px;
+  width: 450px;
   line-height: 20px;
-  transition: .800s ease-in-out;
+  transition: 1s ease-in-out;
   word-spacing: 1px;
+  margin-top: 30px;
 }
-.home_about_h3:hover{
+.home_about_h3:hover {
   opacity: 1;
   font-weight: 300;
   color: rgb(255, 255, 255);
- background: linear-gradient(to left, transparent, 5%, black, 95%, transparent),
-              linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8)),
-              linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
- 
+  background: radial-gradient(circle, rgb(7, 7, 98), 40%, black);
   padding: 50px;
   border-radius: 5px;
-    box-shadow: inset -3px -4px 4px rgb(5, 5, 120), inset 3px 2px 4pxrgb(6, 6, 127);
+  margin: auto;
 }
-
 
 /* HEADER NAV.................................... */
 .home_menu {
@@ -164,6 +154,7 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 .container_menuButtons {
   display: flex;
@@ -178,11 +169,7 @@ body {
   background-color: transparent;
   border: none;
   font-size: 40px;
-  text-shadow: 0px 0px 70px rgb(255, 255, 255), 
-  0px 0px 40px rgb(255, 255, 255), 
-  0px 0px 60px rgb(255, 255, 255), 
-  0px 0px 80px rgb(255, 255, 255), 
-0px 0px 100px rgb(255, 255, 255);
+  text-shadow: 0px 0px 70px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255), 0px 0px 60px rgb(255, 255, 255), 0px 0px 80px rgb(255, 255, 255), 0px 0px 100px rgb(255, 255, 255);
 }
 .down:hover,
 .up:hover {
@@ -190,23 +177,25 @@ body {
 }
 .container_nav {
   position: relative;
-  height: 90px;
-  width: 90px;
+  height: 110px;
+  width: 110px;
   border-radius: 50%;
-  overflow: hidden;
+  /* overflow: hidden; */
   border: solid black 1px;
   background-color: white;
   box-shadow: inset -3px 4px 4px rgb(2, 2, 40), inset 3px 2px 4px rgb(4, 4, 39);
-}
-.home_nav {
-  margin-left: 20px;
-  margin-top: -40px;
-  height: 150px;
-  position: absolute;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.home_nav {
+  display: flex;
+  justify-content: left;
+  margin-left: -20px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  position: absolute;
+  flex-direction: column;
   transition: top 0.7s ease-out;
   top: 0px;
 }

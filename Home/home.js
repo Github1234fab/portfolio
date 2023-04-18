@@ -28,13 +28,13 @@ let intervalId;
 function moveUp(e) {
   let containerHeight = container.offsetHeight;
   let navTop = parseInt(getComputedStyle(nav).top);
-  nav.style.top = Math.max(navTop - 50, -containerHeight + 100) + "px";
+  nav.style.top = Math.max(navTop - 30, -containerHeight + 100) + "px";
 }
 
 function moveDown() {
   let containerHeight = container.offsetHeight;
   let navTop = parseInt(getComputedStyle(nav).top);
-  nav.style.top = Math.min(navTop + 50, 0) + "px";
+  nav.style.top = Math.min(navTop + 30, 0) + "px";
 }
 
 up.addEventListener("mousedown", () => {
