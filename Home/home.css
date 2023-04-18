@@ -3,11 +3,15 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body{
+body,
+html {
   cursor: none;
-  background-color: blue !important;
+  background-color: rgb(16, 16, 173) !important;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
+  position: fixed;
+  border: rgb(8, 8, 8) 2px solid ;
 }
 
 /* CURSEUR PERSONNALISÉ..................................... */
@@ -60,9 +64,9 @@ body{
 
 .header {
   display: flex;
-  width: 100%;
+  /* width: 100vw; */
   flex-direction: column;
-  height: 150px;
+  height: 230px;
 }
 
 .header_title {
@@ -70,7 +74,7 @@ body{
   font-family: oswald;
   letter-spacing: -10px;
   margin-left: 20px;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 .header_title span {
   transition: color 0.1s;
@@ -78,15 +82,16 @@ body{
 .header_title span:hover {
   color: white;
 }
-
 .header_name {
+  color: white;
   font-size: 35px;
-  font-family: oswald;
+  font-family: lato;
   letter-spacing: 32px;
   margin-left: 22px;
   letter-spacing: 10px;
   font-weight: 200;
   margin-top: -10px;
+  text-transform: uppercase;
 }
 .header_name span {
   transition: color 0.1s;
@@ -102,26 +107,28 @@ body{
 
 .main {
   display: flex;
-  /* height: 100vh; */
+  height: 100vh;
+ 
 }
 
 /*ABOUT.................................... */
 
 .main_about {
+  margin-top: 100px;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  min-width: auto;
+    max-height: auto;
 }
 .main_about_h2 {
-  font-weight: 100;
+    font-family:oswald ;
   font-size: 30px;
-  font-family: lato;
   letter-spacing: 15px;
-  color: rgb(255, 255, 255);
+  color: rgb(8, 7, 7);
   margin-top: 40px;
-  margin-left: 20px;
+  margin-left: 100px;
   font-weight: 200;
-}
+} 
 .main_about_h2 span {
   transition: color 0.1s;
 }
@@ -129,43 +136,31 @@ body{
   color: black;
 }
 .main_about_h3 {
-  opacity: 0.5;
-  color: rgb(2, 2, 30);
-  font-size: 6px;
-  font-weight: 300;
-  text-align: justify;
+  padding: 40px;
+  min-width: auto;
   font-family: lato;
-  width: 450px;
+  margin-left: 30px;
   line-height: 20px;
-  transition: 1s ease-in-out;
-  word-spacing: 1px;
-  box-shadow: none;
-}
-.main_about_h3:hover {
-  opacity: 1;
   font-weight: 300;
   color: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgb(31, 31, 158), 40%, black);
-  box-shadow: 2px 2px 3px black;
-  padding: 20px;
-  border-radius: 1px;
-  font-size: 13px;
-  width: 100%;
+  font-size: 14px;
+  background: linear-gradient(to left, transparent, 30%, rgb(4, 16, 84),  transparent)
 }
 
 /* NAV.................................... */
 
-
 .main_nav {
   display: flex; 
+  min-width: auto;
+  max-height: auto;
+align-items:first flex-start;
 }
 .container_navButtons {
   display: flex;
   flex-direction: row;
   width: 80px;
-  /* justify-content: space-around; */
   margin-left: 20px;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 .down,
 .up {
@@ -194,7 +189,6 @@ body{
   justify-content: center;
 }
 .nav {
-  /* height: 100px; */
   display: flex;
   justify-content: left;
   margin-top: -50px;
@@ -220,27 +214,6 @@ body{
 }
 
 /* PROJETS..................................... */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* .carousel-img {
   max-width: 50%;
@@ -283,7 +256,7 @@ body{
   height: 150px;
   width: 150px;
   /* opacity: 0.5; */
-  /* transition: opacity 0.7s ease-in-out;
+/* transition: opacity 0.7s ease-in-out;
   color: white;
   font-family: oswald;
   display: flex;
