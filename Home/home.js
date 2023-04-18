@@ -25,24 +25,38 @@ container.style.position = "relative";
 
 let intervalId;
 
+// function moveUp(e) {
+//   let containerHeight = container.offsetHeight;
+//   let navTop = parseInt(getComputedStyle(nav).top);
+//   nav.style.top = Math.max(navTop - 30, -containerHeight + 100) + "px";
+// }
+
+// function moveDown() {
+//   let containerHeight = container.offsetHeight;
+//   let navTop = parseInt(getComputedStyle(nav).top);
+//   nav.style.top = Math.min(navTop + 30, 0) + "px";
+// }
+
 function moveUp(e) {
-  let containerHeight = container.offsetHeight;
-  let navTop = parseInt(getComputedStyle(nav).top);
-  nav.style.top = Math.max(navTop - 30, -containerHeight + 100) + "px";
+  // let navTop = parseInt(getComputedStyle(nav).top);
+  nav.style.marginTop = "-10px";
 }
 
-function moveDown() {
-  let containerHeight = container.offsetHeight;
-  let navTop = parseInt(getComputedStyle(nav).top);
-  nav.style.top = Math.min(navTop + 30, 0) + "px";
+
+function moveDown(e) {
+  // let navTop = parseInt(getComputedStyle(nav).top);
+  // nav.style.top = navTop + 30 + "px";
+   nav.style.marginTop = "10px";
 }
 
 up.addEventListener("mousedown", () => {
-  intervalId = setInterval(moveUp, 100);
+  // intervalId = setInterval(moveUp, 100);
+  moveUp()
 });
 
 down.addEventListener("mousedown", () => {
-  intervalId = setInterval(moveDown, 100);
+  // intervalId = setInterval(moveDown, 100);
+  moveDown();
 });
 
 document.addEventListener("mouseup", () => {

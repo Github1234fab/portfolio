@@ -180,9 +180,9 @@ body {
   height: 110px;
   width: 110px;
   border-radius: 50%;
-  /* overflow: hidden; */
+  overflow: hidden;
   border: solid black 1px;
-  background-color: white;
+  background-color: rgb(4, 4, 56);
   box-shadow: inset -3px 4px 4px rgb(2, 2, 40), inset 3px 2px 4px rgb(4, 4, 39);
   display: flex;
   align-items: center;
@@ -196,11 +196,11 @@ body {
   margin-bottom: 50px;
   position: absolute;
   flex-direction: column;
-  transition: top 0.7s ease-out;
+  transition: 0.9s ease-out;
   top: 0px;
 }
 .home_a {
-  color: black;
+  color: rgb(246, 246, 246);
   text-decoration: none;
   font-family: lato;
   font-size: 14px;
