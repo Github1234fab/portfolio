@@ -63,7 +63,7 @@ susPoints.addEventListener("click", () => {
 
 homeAboutH3.addEventListener("click", () => {
   susPoints.classList.add("sus_points_visible");
-  homeAboutH3.classList.add("home_about_remove");
+  homeAboutH3.classList.add("home_about_hidden");
 });
 
 
