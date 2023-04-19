@@ -19,24 +19,11 @@ document.addEventListener("click", () => {
 
 let up = document.querySelector(".up");
 let down = document.querySelector(".down");
-let nav = document.querySelector(".home_nav");
+let nav = document.querySelector(".nav");
 const container = document.querySelector(".container_nav");
 container.style.position = "relative";
 
 let intervalId;
-
-// function moveUp(e) {
-//   let containerHeight = container.offsetHeight;
-//   let navTop = parseInt(getComputedStyle(nav).top);
-//   nav.style.top = Math.max(navTop - 30, -containerHeight + 100) + "px";
-// }
-
-// function moveDown() {
-//   let containerHeight = container.offsetHeight;
-//   let navTop = parseInt(getComputedStyle(nav).top);
-//   nav.style.top = Math.min(navTop + 30, 0) + "px";
-// }
-
 
 let navTop = 0;
 function moveUp(e) {
@@ -45,29 +32,26 @@ function moveUp(e) {
   nav.style.marginTop = navTop + "px";
 }
 
-
 function moveDown(e) {
-  // let navTop = parseInt(getComputedStyle(nav).top);
-  // nav.style.top = navTop + 30 + "px";
   navTop -= 30;
-   nav.style.marginTop = navTop + "px";
+  nav.style.marginTop = navTop + "px";
 }
 
 up.addEventListener("mousedown", () => {
-
-  moveUp()
+  up.style.transform = "scale(1.3)";
+  moveUp();1.
+});
+up.addEventListener("mouseup", () => {
+  up.style.transform = "scale(1)";
 });
 
 down.addEventListener("mousedown", () => {
-
+   down.style.transform = "scale(1.3)";
   moveDown();
 });
-
-// document.addEventListener("mouseup", () => {
-//   clearInterval(intervalId);
-// });
-
-// console.log(nav.parentElement);
+down.addEventListener("mouseup", () => {
+   down.style.transform = "scale(1)";
+});
 
 //ANIMATION BIENVENUE..........................................
 
@@ -84,26 +68,12 @@ homeAboutH3.addEventListener("click", () => {
   homeAboutH3.classList.add("home_about_hidden");
 });
 
-
-
-
-
-
-
-
-
-
-
 //     <!-- <div class="electric_line" id="electricLine"></div>
 // <div id="container_bubbles" >
 //   <img class="spark" src="../assets/pngegg (41).png" alt="">
 //   <img class ="spark2" src="../assets/pngegg (40).png" alt="">
 
 // </div> --></img>
-
-
-
-
 
 // let electricLine = document.getElementById("electricLine");
 // let spark = document.getElementById("spark");
