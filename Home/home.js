@@ -94,7 +94,12 @@ homeAboutH3.addEventListener("click", () => {
 
 
 
+//     <!-- <div class="electric_line" id="electricLine"></div>
+// <div id="container_bubbles" >
+//   <img class="spark" src="../assets/pngegg (41).png" alt="">
+//   <img class ="spark2" src="../assets/pngegg (40).png" alt="">
 
+// </div> --></img>
 
 
 

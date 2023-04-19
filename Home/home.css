@@ -3,15 +3,19 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body,
-html {
+body{
   cursor: none;
-  background-color: rgb(16, 16, 173) !important;
+  background-color: rgb(111, 47, 47) !important;
+  /* background-color: rgb(16, 16, 173) !important; */
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   position: fixed;
-  border: rgb(8, 8, 8) 2px solid ;
+}
+
+.portfolio{
+  display: flex;
+  flex-direction: column;
 }
 
 /* CURSEUR PERSONNALISÉ..................................... */
@@ -64,17 +68,18 @@ html {
 
 .header {
   display: flex;
-  /* width: 100vw; */
+  width: 100vw;
   flex-direction: column;
-  height: 230px;
+  align-items: flex-start;
+  /* background-color: rgb(111, 47, 47); */
 }
 
 .header_title {
-  font-size: 75px;
+  font-size: 90px;
   font-family: oswald;
   letter-spacing: -10px;
-  margin-left: 20px;
-  margin-top: 100px;
+  margin-left: 100px;
+  margin-top: 150px;
 }
 .header_title span {
   transition: color 0.1s;
@@ -84,10 +89,10 @@ html {
 }
 .header_name {
   color: white;
-  font-size: 35px;
+  font-size: 45px;
   font-family: lato;
   letter-spacing: 32px;
-  margin-left: 22px;
+  margin-left: 100px;
   letter-spacing: 10px;
   font-weight: 200;
   margin-top: -10px;
@@ -97,7 +102,7 @@ html {
   transition: color 0.1s;
 }
 .header_name span:hover {
-  color: white;
+  color: rgb(2, 2, 38);
 }
 .header_name span:nth-child(7) {
   margin-right: 20px;
@@ -105,30 +110,28 @@ html {
 
 /* MAIN..................................... */
 
-.main {
-  display: flex;
-  height: 100vh;
- 
-}
-
-/*ABOUT.................................... */
-
 .main_about {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  min-width: auto;
-    max-height: auto;
+  /* min-width: auto;
+  min-height: auto; */
 }
 .main_about_h2 {
-    font-family:oswald ;
+  margin-top: 20px;
+  font-family: oswald;
   font-size: 30px;
   letter-spacing: 15px;
-  color: rgb(8, 7, 7);
-  margin-top: 40px;
+  color: #119e94;
   margin-left: 100px;
   font-weight: 200;
-} 
+  text-transform: lowercase;
+}
+.main_about_h2 span:nth-child(6) {
+  text-transform: uppercase;
+}
+.main_about_h2 span:nth-child(1) {
+  text-transform: uppercase;
+}
 .main_about_h2 span {
   transition: color 0.1s;
 }
@@ -136,31 +139,36 @@ html {
   color: black;
 }
 .main_about_h3 {
-  padding: 40px;
-  min-width: auto;
+  text-align: left;
+  margin-top: 20px;
+  /* min-width: 100px; */
   font-family: lato;
-  margin-left: 30px;
-  line-height: 20px;
+  margin-left: 100px;
+  line-height: 40px;
   font-weight: 300;
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  background: linear-gradient(to left, transparent, 30%, rgb(4, 16, 84),  transparent)
+  color: #07ffee;
+  font-size: 18px;
+  border-radius: 20px 50px 40px 60px;
+  /* background-color: #119e94; */
+  /* background: linear-gradient(to left, transparent, 30%, rgb(255, 255, 255), transparent); */
 }
 
 /* NAV.................................... */
 
 .main_nav {
-  display: flex; 
-  min-width: auto;
-  max-height: auto;
-align-items:first flex-start;
+/* margin-top: 120px;
+margin-left: 300px; */
+ /* min-width: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 .container_navButtons {
   display: flex;
   flex-direction: row;
   width: 80px;
   margin-left: 20px;
-  margin-top: 80px;
 }
 .down,
 .up {
@@ -175,8 +183,6 @@ align-items:first flex-start;
   cursor: none;
 }
 .container_nav {
-  margin-top: 60px;
-  margin-left: 70px;
   height: 120px;
   width: 120px;
   border-radius: 50%;
