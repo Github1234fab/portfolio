@@ -71,9 +71,10 @@ body {
   font-size: 60px;
   margin-left: 60px;
   margin-top: 30px;
-  letter-spacing: -4px;
-  font-weight: 400;
+  letter-spacing: 4px;
+  font-weight: 300;
   color: #a35f00;
+   /* color: white; */
 }
 /* .header_title span:nth-child(3){
   color: #07ffee;
