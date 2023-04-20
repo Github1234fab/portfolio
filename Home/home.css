@@ -13,8 +13,8 @@ body {
 /* CURSEUR PERSONNALISÉ..................................... */
 
 .cursor {
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   cursor: none;
   border: solid 3px white;
@@ -63,19 +63,29 @@ body {
   flex-direction: column;
 }
 .header_title {
-  font-family: poppins;
-  font-size: 80px;
+  font-family: lato;
+  font-size: 90px;
   margin-left: 60px;
   margin-top: 30px;
   letter-spacing: -8px;
   font-weight: 400;
 }
+/* .header_title span:nth-child(3){
+  color: #07ffee;
+}
+.header_title span:nth-child(5){
+  color: #07ffee;
+}
+.header_title span:nth-child(8){
+   color: #07ffee;
+} */
 .header_title span {
   transition: color 0.1s;
 }
 .header_title span:hover {
   color: white;
 }
+
 .header_name {
   color: white;
   font-size: 18px;
@@ -84,6 +94,7 @@ body {
   letter-spacing: 15px;
   text-transform: uppercase;
   margin-left: 65px;
+  margin-top: -20px;
 }
 .header_name span {
   transition: color 0.4s;
@@ -128,22 +139,22 @@ body {
 }
 
 .logos:nth-child(1) {
-  height: 30%;
+  height: 20%;
 }
 .logos:nth-child(2) {
-  height: 27%;
+  height: 17%;
 }
 .logos:nth-child(3) {
-  height: 38%;
+  height: 28%;
 }
 .logos:nth-child(4) {
-  height: 30%;
+  height: 20%;
 }
 .logos:nth-child(5) {
-  height: 36%;
+  height: 26%;
 }
 .logos:nth-child(6) {
-  height: 36%;
+  height: 26%;
 }
 
 /* MAIN ...................... */
@@ -151,22 +162,20 @@ body {
 .main {
   display: flex;
   height: 100%;
-
-  /* background-color: pink; */
 }
 
 /* ABOUT...................... */
 
 .aboutAndNav {
   display: flex;
-  width: 100%;
   margin-left: 100px;
+  width: 100%;
 }
+
 .about_h2 {
   margin-top: 40px;
   font-size: 40px;
   font-family: lato;
-  letter-spacing: 13px;
   color: #119e94;
   font-weight: 300;
   text-transform: lowercase;
@@ -184,27 +193,52 @@ body {
 .about_h2 span:hover {
   color: black;
 }
+
 /* NAV...................... */
 
+.line{
+  margin-top: 50px;
+  width: 5px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 1px 1px 3px black inset;
+
+}
 .about_h3 {
+  width: 70%;
   font-size: 14px;
   font-family: lato;
-  line-height: 30px;
+  line-height: 34px;
   font-weight: 300;
   color: #07ffee;
+  text-align: left;
+  margin-top: 40px;
+  margin-left: 20px;
+  transition: 1s ease-in-out;
+}
+.about_h3:hover {
+ padding: 10px;
+ background-color: rgb(2, 2, 62);
+ color:rgb(251, 251, 251);7, 7, 77)
+ filter: blur(0px);
+ box-shadow: 2px 2px 4px rgb(8, 8, 8); 
+ border-radius: 4px;
+ height: 250px;
 }
 .container_nav {
+  margin-top: 34px;
   margin-left: 20px;
-  margin-top: 40px;
   display: flex;
-  width: 100%;
-  align-items: center;
+  justify-content: center;
+  width: 30%;
 }
 .window_nav {
-  float: left;
-  shape-outside: circle();
-  height: 120px;
-  width: 120px;
+  margin-right: 290px;
+    float: right;
+   shape-outside: circle(50%);
+  margin: 40px ;
+  height: 130px;
+  width: 130px;
   border-radius: 50%;
   overflow: hidden;
   border: solid black 1px;
@@ -216,7 +250,6 @@ body {
 }
 .nav {
   display: flex;
-
   flex-direction: column;
   transition: 0.9s ease-out;
 }
