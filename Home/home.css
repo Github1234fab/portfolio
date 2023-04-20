@@ -3,14 +3,11 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body {
+body{
   cursor: none;
-  /* background-color: rgb(111, 47, 47) !important; */
+  /* background-color: rgb(111, 47, 47); */
   background-color: rgb(16, 16, 173) !important;
   height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: fixed;
 }
 
 /* CURSEUR PERSONNALISÉ..................................... */
@@ -58,23 +55,20 @@ body {
     box-shadow: 1px 1px 2px rgb(0, 0, 0);
   }
 }
+
+  /* HEADER.............................. */
+  
 .header {
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
-    min-height: 100px;
-  height: auto;
 }
-/* @media (min-height: 600px) {
-  .header {
-    min-height: 50px;
-  } */
 .header_title {
-  font-family: oswald;
-  font-size: 50px;
-  margin-left: 10%;
-  margin-top: 5%;
-  letter-spacing: -5px;
+  font-family: poppins;
+  font-size: 80px;
+  margin-left: 60px;
+  margin-top: 30px;
+  letter-spacing: -8px;
+  font-weight: 400;
 }
 .header_title span {
   transition: color 0.1s;
@@ -89,58 +83,77 @@ body {
   font-weight: 100;
   letter-spacing: 15px;
   text-transform: uppercase;
-  margin-left: 10%;  
+  margin-left: 65px;  
 }
 .header_name span {
-  transition: color 0.1s;
+  transition: color 0.4s;
 }
 .header_name span:hover {
   color: rgb(2, 2, 38);
+ font-size: 16;
 }
 .header_name span:nth-child(7) {
   margin-right: 20px;
 }
+
+/* TECHNOS...................... */
+
+.technos {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  margin-left: 20px;
+}
+
+.logos:nth-child(1) {
+  height: 30%;
+}
+.logos:nth-child(2) {
+  height: 27%;
+}
+.logos:nth-child(3) {
+  height: 38%;
+}
+.logos:nth-child(4) {
+  height: 30%;
+}
+.logos:nth-child(5) {
+  height: 36%;
+}
+.logos:nth-child(6) {
+  height: 36%;
+}
+
+/* MAIN ...................... */
+
+
 .main {
   display: flex;
   height: 100%;
+  width: 100%;
   /* background-color: pink; */
 }
-.informations {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  /* background-color: rgb(231, 197, 197); */
-}
-.technos{
-  display: flex;
-  width: 60%;
-  height: 20%;
-  margin-left: 5%;
 
-  align-items: center;
-  justify-content: space-around;
-}
-.logos{
-  height: 30%;
-}
+ /* ABOUT...................... */
+
 .about {
   /* background-color: red; */
   /* border: solid blue 4px; */
   display: flex;
-  width: 50%;
-  margin-top: 10%;
+  width: 100%;
   margin-left: 10%;
-  padding: 5%;
+  /* justify-content: center; */
 }
 .about_h2 {
-  font-size: 14px;
+  font-size: 20px;
   font-family: lato;
-  letter-spacing: 10px;
+  /* letter-spacing: 13px; */
   color: #119e94;
   font-weight: 300;
   text-transform: lowercase;
   writing-mode: vertical-lr;
-  margin: 2%;
 }
 .about_h2 span:nth-child(6) {
   text-transform: uppercase;
@@ -154,28 +167,33 @@ body {
 .about_h2 span:hover {
   color: black;
 }
+ /* NAV...................... */
+
 .about_h3 {
+  width: 30%;
   font-size: 14px;
   font-family: lato;
-  line-height: 23px;
+  line-height: 22px;
   font-weight: 300;
   color: #07ffee;
-  text-align: justify;
   /* background-color: rgb(255, 255, 254); */
 }
 .container_nav {
-  /* background-color: green; */
-  margin-right: 20%;
-  width: 30%;
-  justify-content: center;
-  z-index: 2;
-}
-.wrapper_nav{
+  padding-left: 5%;
+  shape-outside: circle();
+  margin-right: 10%;
+  margin-top: 10%;
   display: flex;
-  margin-left: 5%;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+
 }
 .window_nav {
-  margin-top: 15%;
+  float: left;
+  shape-outside: circle();
+  margin-left: -20%;
   height: 120px;
   width: 120px;
   border-radius: 50%;
