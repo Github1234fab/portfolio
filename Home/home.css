@@ -151,7 +151,7 @@ body {
 .main {
   display: flex;
   height: 100%;
-  width: 100%;
+
   /* background-color: pink; */
 }
 
@@ -160,10 +160,10 @@ body {
 .aboutAndNav {
   display: flex;
   width: 100%;
-  margin-left: 10%;
+  margin-left: 100px;
 }
 .about_h2 {
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 40px;
   font-family: lato;
   letter-spacing: 13px;
@@ -187,29 +187,22 @@ body {
 /* NAV...................... */
 
 .about_h3 {
-  width: 30%;
   font-size: 14px;
   font-family: lato;
-  line-height: 22px;
+  line-height: 30px;
   font-weight: 300;
   color: #07ffee;
-  /* background-color: rgb(255, 255, 254); */
 }
 .container_nav {
-  padding-left: 5%;
-  shape-outside: circle();
-  margin-right: 10%;
-  margin-top: 10%;
+  margin-left: 20px;
+  margin-top: 40px;
   display: flex;
-  width: 70%;
-  height: 100%;
+  width: 100%;
   align-items: center;
-  box-sizing: border-box;
 }
 .window_nav {
   float: left;
   shape-outside: circle();
-  margin-left: -20%;
   height: 120px;
   width: 120px;
   border-radius: 50%;
@@ -223,9 +216,7 @@ body {
 }
 .nav {
   display: flex;
-  justify-content: left;
-  margin-top: -50px;
-  margin-bottom: 50px;
+
   flex-direction: column;
   transition: 0.9s ease-out;
 }
