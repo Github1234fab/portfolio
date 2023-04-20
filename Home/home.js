@@ -17,56 +17,74 @@ document.addEventListener("click", () => {
 
 //POSITION ET ANIMATION DU MENU..........................................
 
-let up = document.querySelector(".up");
-let down = document.querySelector(".down");
-let nav = document.querySelector(".nav");
-const container = document.querySelector(".container_nav");
-container.style.position = "relative";
+// let up = document.querySelector(".up");
+// let down = document.querySelector(".down");
+// let nav = document.querySelector(".nav");
+// const container = document.querySelector(".container_nav");
+// container.style.position = "relative";
 
-let intervalId;
+// let intervalId;
 
-let navTop = 0;
-function moveUp(e) {
-  // let navTop = parseInt(getComputedStyle(nav).top);
-  navTop += 30;
-  nav.style.marginTop = navTop + "px";
-}
+// let navTop = 0;
+// function moveUp(e) {
 
-function moveDown(e) {
-  navTop -= 30;
-  nav.style.marginTop = navTop + "px";
-}
+//   navTop += 30;
+//   nav.style.marginTop = navTop + "px";
+// }
 
-up.addEventListener("mousedown", () => {
-  up.style.transform = "scale(1.3)";
-  moveUp();1.
-});
-up.addEventListener("mouseup", () => {
-  up.style.transform = "scale(1)";
-});
+// function moveDown(e) {
+//   navTop -= 30;
+//   nav.style.marginTop = navTop + "px";
+// }
 
-down.addEventListener("mousedown", () => {
-   down.style.transform = "scale(1.3)";
-  moveDown();
-});
-down.addEventListener("mouseup", () => {
-   down.style.transform = "scale(1)";
-});
+// up.addEventListener("mousedown", () => {
+//   up.style.transform = "scale(1.3)";
+//   moveUp();1.
+// });
+// up.addEventListener("mouseup", () => {
+//   up.style.transform = "scale(1)";
+// });
+
+// down.addEventListener("mousedown", () => {
+//    down.style.transform = "scale(1.3)";
+//   moveDown();
+// });
+// down.addEventListener("mouseup", () => {
+//    down.style.transform = "scale(1)";
+// });
 
 //ANIMATION BIENVENUE..........................................
 
-let homeAboutH3 = document.querySelector(".home_about_h3 ");
-let susPoints = document.querySelector(".sus_points");
+// let homeAboutH3 = document.querySelector(".home_about_h3 ");
+// let susPoints = document.querySelector(".sus_points");
 
-susPoints.addEventListener("click", () => {
-  susPoints.classList.add("sus_points_hidden");
-  homeAboutH3.classList.add("home_about_h3_visible");
+// susPoints.addEventListener("click", () => {
+//   susPoints.classList.add("sus_points_hidden");
+//   homeAboutH3.classList.add("home_about_h3_visible");
+// });
+
+// homeAboutH3.addEventListener("click", () => {
+//   susPoints.classList.add("sus_points_visible");
+//   homeAboutH3.classList.add("home_about_hidden");
+// });
+
+
+// Récupérer l'élément about_h3
+const aboutH3 = document.getElementById("aboutMe");
+
+// Ajouter un écouteur d'événement scroll à la div about_h3
+aboutH3.addEventListener('scroll', () => {
+  // Récupérer la position de l'élément about_h3 par rapport au haut de la div
+  const aboutH3Top = aboutH3.scrollTop;
+
+  // Si l'élément about_h3 est proche du bord supérieur de la div, ajouter une opacité
+  if (aboutH3Top > 0 && aboutH3Top < aboutH3.clientHeight - window.innerHeight * 0.3) {
+    aboutH3.style.opacity = '0.5';
+  } else {
+    aboutH3.style.opacity = '1';
+  }
 });
 
-homeAboutH3.addEventListener("click", () => {
-  susPoints.classList.add("sus_points_visible");
-  homeAboutH3.classList.add("home_about_hidden");
-});
 
 //     <!-- <div class="electric_line" id="electricLine"></div>
 // <div id="container_bubbles" >
