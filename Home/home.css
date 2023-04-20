@@ -60,7 +60,11 @@ body {
 
 .header {
   display: flex;
-  flex-direction: column;
+}
+.header_titles{
+display: flex;
+flex-direction: column;
+width: 100%;
 }
 .header_title {
   font-family: lato;
@@ -92,7 +96,7 @@ body {
   font-family: lato;
   font-weight: 100;
   letter-spacing: 15px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   margin-left: 65px;
   margin-top: -20px;
 }
@@ -103,19 +107,26 @@ body {
   color: rgb(2, 2, 38);
   font-size: 16;
 }
+.header_name span:nth-child(1) {
+   text-transform: uppercase;
+}
+.header_name span:nth-child(8) {
+   text-transform: uppercase;
+}
 .header_name span:nth-child(7) {
   margin-right: 20px;
 }
+
 
 /* TECHNOS...................... */
 
 .technos {
   display: flex;
-  width: 70%;
+  width: 50%;
   align-items: center;
   justify-content: space-around;
   height: 100px;
-  margin-left: 20px;
+  margin-left: 50px;
   transition: 0.6s ease-in-out;
 }
 .logos:hover {
@@ -219,47 +230,46 @@ body {
 .about_h3:hover {
  padding: 10px;
  background-color: rgb(2, 2, 62);
- color:rgb(251, 251, 251);7, 7, 77)
+ color:rgb(251, 251, 251);
  filter: blur(0px);
  box-shadow: 2px 2px 4px rgb(8, 8, 8); 
  border-radius: 4px;
  height: 250px;
 }
 .container_nav {
-  margin-top: 34px;
-  margin-left: 20px;
   display: flex;
-  justify-content: center;
-  width: 30%;
 }
-.window_nav {
-  margin-right: 290px;
-    float: right;
-   shape-outside: circle(50%);
-  margin: 40px ;
-  height: 130px;
-  width: 130px;
-  border-radius: 50%;
+/* .window_nav {
+  margin-top: 20px;
+  margin-right: 30px; 
+  height: 150px;
+  width: 90px;
+  border-radius: 5%;
   overflow: hidden;
-  border: solid black 1px;
-  background-color: #119e94;
+  background: white;
   box-shadow: inset -3px 4px 4px rgb(2, 2, 40), inset 3px 2px 4px rgb(4, 4, 39);
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 .nav {
+  margin-top: 10px;
+   margin-right: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   transition: 0.9s ease-out;
+  height: 100px;
+
 }
 .nav_a {
-  color: rgb(255, 255, 255);
+  color: rgb(245, 241, 241);
   text-decoration: none;
-  font-family: lato;
+  font-family: poppins;
   font-size: 13px;
   text-align: left;
   transition: 0.2s ease-in-out;
+  /* text-shadow: 0px 0px 20px white, 0px 0px 40px white, 0px 0px 60px white; */
 }
 .nav_a:hover {
   color: rgb(251, 251, 251);
