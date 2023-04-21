@@ -1,4 +1,39 @@
+body{
+     background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+}
 
+.animation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.animation_title{
+  color: white;
+  font-family: poppins;
+}
+.start,
+.stop,
+.restart {
+  margin-top: -20px;
+  height: 50px;
+  width: 50px;
+ background: linear-gradient(to left, #8a2387, 10% , #e94057);
+  box-shadow: 0px 1px 3px #fefefe, -1px 0px 4px #000000;
+  color: white;
+  font-family: poppins;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+}
+.animation_buttons_actions {
+  display: flex;
+  width: 180px;
+  justify-content: space-around;
+  margin-top: 20px;
+}
 .panorama_A {
   margin-top: 50px;
   width: 800px;
@@ -206,4 +241,10 @@
   left: 10px;
   z-index: 9999;
   color: rgb(183, 179, 179);
+}
+
+.technology{
+  font-family: poppins;
+  font-size: 14px;
+  color: white;
 }
