@@ -67,20 +67,20 @@ html {
   width: 100%;
 }
 .header_title {
-  font-family: lato;
+  font-family: chivo mono;
   font-size: 55px;
   margin-left: 60px;
   margin-top: 30px;
-  letter-spacing: 4px;
-  font-weight: 300;
-  color: #a35f00;
+  letter-spacing: -15px;
+  font-weight: 100;
+  color: #ffffff;
 }
 
 .header_title span {
   transition: color 0.1s;
 }
 .header_title span:hover {
-  color: white;
+  color: rgb(45, 45, 234);
 }
 
 .header_name {
@@ -88,7 +88,7 @@ html {
   font-size: 18px;
   font-family: lato;
   font-weight: 100;
-  letter-spacing: 11px;
+  letter-spacing: 8px;
   text-transform: lowercase;
   margin-left: 65px;
   margin-top: -10px;
@@ -133,7 +133,7 @@ html {
 /* ABOUT...................... */
 
 .about {
-  margin-top: 20px;
+  margin-top: 50px;
   margin-left: 150px;
   display: flex;
   margin-left: 100px;
@@ -141,7 +141,7 @@ html {
 }
 
 .about_h2 {
-  font-weight: 100;
+  font-weight: bold;
   margin-top: 40px;
   font-size: 40px;
   font-family: lato;
@@ -250,7 +250,7 @@ html {
   position: relative;
  width: 40%;
   margin-top: 200px;
-  margin-right: 70px;
+  margin-right: 50px;
   
 }
 .nav {
@@ -321,7 +321,7 @@ html {
   align-content: center;
   justify-content: space-around;
   border: solid 1px black;
-  border-image: linear-gradient(rgb(150, 59, 59), blue);
+  border-image: linear-gradient(to right, #000428, #004e92);;
   border-image-slice: 1;
   box-shadow: 0px 0px 2px white;
   margin-bottom: 30px;

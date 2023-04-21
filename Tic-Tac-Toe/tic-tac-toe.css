@@ -2,6 +2,7 @@ body {
   background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
 }
 .tic_tac_toe {
+  margin-top: -30px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -143,6 +144,24 @@ body {
 .hidden_reload {
   visibility: visible;
 }
+
+.technology{
+  color: white;
+  font-family: lato;
+  font-weight: 200;
+  margin-top: -30px;
+
+
+}
+
+
+
+
+
+
+
+
+
 /* .test{
   height: 300px;
 }
