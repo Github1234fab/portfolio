@@ -113,53 +113,9 @@ body, html {
   margin-top: 10px;
   font-family: poppins;
   margin-left: 64px;
-  color: #A30032;
+  color: #9c4b63;
   font-weight: 200;  
   margin-bottom: -10px;   
-} 
-
-/* TECHNOS...................... */
-.technos{
-  width: 100%;
-  display: flex;
-  height: 120px;
-}
- 
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-    transition-timing-function: ease-out;
-  }
-  60% {
-    transform: translateY(-5px);
-    transition-timing-function: ease-in;
-  }
-}
-
-.logos:nth-child(1) {
-  height: 10%;
-}
-.logos:nth-child(2) {
-  height: 17%;
-}
-.logos:nth-child(3) {
-  height: 18%;
-}
-.logos:nth-child(4) {
-  height: 10%;
-}
-.logos:nth-child(5) {
-  height: 16%;
-}
-.logos:nth-child(6) {
-  height: 16%;
 } 
 
 /* MAIN ...................... */
@@ -312,17 +268,20 @@ body, html {
 .up:hover {
   cursor: none;
 }
-
-.contact{
-  /* margin: auto;
-  margin-top: 50px; */
+.wrapper_contact{
   width: 70%;
-  /* display:flex;
-  flex-direction: column; */
-  height: 150px;
-  /* align-items: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.contact{
+  display:flex;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+  align-items: center; 
   align-content: center;
-  justify-content: center; */
+  justify-content: space-around; 
  border: solid 3px black;
  border-image: linear-gradient(black, blue);
  border-image-slice: 1;
@@ -333,7 +292,7 @@ body, html {
   font-weight: 200;
 }
 .contact_container{
-  margin-top: 30px;
+  /* margin-top: 30px; */
   width: 70%;
   display: flex;
   justify-content: space-around;
@@ -344,4 +303,51 @@ body, html {
 }
 .contact_text{
   color: white;
+} 
+/* TECHNOS...................... */
+.technos{
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  animation: bounce 1.2s ease-in;
+  z-index: -1;
+}
+ 
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+    transition-timing-function: ease-out;
+  }
+  60% {
+    transform: translateY(-5px);
+    transition-timing-function: ease-in;
+  }
+}
+
+.logos:nth-child(1) {
+  height: 65%;
+}
+.logos:nth-child(2) {
+  height: 60%;
+}
+.logos:nth-child(3) {
+  height: 83%;
+}
+.logos:nth-child(4) {
+  height: 60%;
+}
+.logos:nth-child(5) {
+  height: 66%;
+}
+.logos:nth-child(6) {
+  height: 66%;
 } 
