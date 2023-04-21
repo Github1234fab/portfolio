@@ -3,7 +3,8 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body, html {
+body,
+html {
   cursor: none;
   background-color: rgb(2, 2, 41) !important;
   height: 100vh;
@@ -30,7 +31,7 @@ body, html {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-} 
+}
 .cursor_animation {
   animation: rotation 0.3s;
 }
@@ -53,11 +54,11 @@ body, html {
     transform: scale(1);
     box-shadow: 1px 1px 2px rgb(0, 0, 0);
   }
-} 
+}
 
 /* HEADER.............................. */
 
- .header {
+.header {
   display: flex;
 }
 .header_titles {
@@ -73,9 +74,9 @@ body, html {
   letter-spacing: 4px;
   font-weight: 300;
   color: #a35f00;
-} 
+}
 
- .header_title span {
+.header_title span {
   transition: color 0.1s;
 }
 .header_title span:hover {
@@ -109,21 +110,24 @@ body, html {
   margin-right: 20px;
 }
 
-.developper{
+.developper {
   margin-top: 10px;
   font-family: poppins;
   margin-left: 64px;
   color: #9c4b63;
-  font-weight: 200;  
-  margin-bottom: -10px;   
-} 
+  font-weight: 200;
+  margin-bottom: -10px;
+  transition: .200s ease-in-out;
+}
+.developper:hover{
+ color: #9b9094;
+}
 
 /* MAIN ...................... */
 
- .main {
+.main {
   display: flex;
-  height: 100%;
-} 
+}
 
 /* ABOUT...................... */
 
@@ -140,7 +144,7 @@ body, html {
   margin-top: 40px;
   font-size: 40px;
   font-family: lato;
-  color: #603882;
+  color: #6d5582;
   font-weight: 100;
   text-transform: lowercase;
   writing-mode: vertical-lr;
@@ -152,17 +156,17 @@ body, html {
   text-transform: uppercase;
 }
 .about_h2 span {
-  transition: color 0.1s;
+  transition: color 0.3s;
 }
 .about_h2 span:hover {
-  color: black;
-} 
+  color: #dddadf;
+}
 
 /* NAV...................... */
 
- .about_h3 {
+.about_h3 {
   position: relative;
-  width: 40%;
+  width: 60%;
   font-size: 13px;
   font-family: lato;
   line-height: 34px;
@@ -184,18 +188,16 @@ body, html {
 
 .about_h3::-webkit-scrollbar {
   width: 8px;
-} 
+}
 .about_h3::-webkit-scrollbar-track {
   box-shadow: 1px 1px 3px black;
   border-radius: 5px 8px;
 }
 
 .about_h3::-webkit-scrollbar-thumb {
- 
-    background-color: #a35f00;
-  
+  background-color: #a35f00;
   box-shadow: inset 1px 1px 3px black;
-   border-radius: 5px 20px;
+  border-radius: 5px 20px;
 }
 
 .about_h3::-webkit-scrollbar-thumb:hover {
@@ -204,35 +206,63 @@ body, html {
 
 .container_nav {
   display: flex;
-} 
+}
 
- .window_nav {
-  margin-top: 20px;
-  margin-right: 30px; 
-  height: 150px;
-  width: 90px;
-  border-radius: 5%;
-  overflow: hidden;
-  background: white;
-  box-shadow: inset -3px 4px 4px rgb(2, 2, 40), inset 3px 2px 4px rgb(4, 4, 39);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} 
- .nav {
+.overlay1{
+  position: absolute;
+  top: 17px;
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  opacity: 0.1;
+  z-index: -1;
+}
+.overlay2{
+  position: absolute;
+  top: 50px;
+  left: 80px; 
+  height: 130px;
+  width: 70px;
+  background-color: #a35f00;
+  opacity: 0.5;
+   z-index: -1;
+}
+/* .overlay3{
+  position: absolute;
+  top: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: #6d5582;
+  opacity: 0.1;
+} */
+.overlay4{
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  height: 130px;
+  width: 100px;
+  background-color: blue;
+  opacity: 0.1;
+   z-index: -1;
+}
+.wrapper_nav{
+  position: relative;
+ width: 40%;
   margin-top: 200px;
-  margin-right: 100px;
+  margin-right: 70px;
+  
+}
+.nav {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   transition: 0.9s ease-out;
   height: auto;
   z-index: 9999;
-  width: 40%;
- 
 }
 .nav_a {
-   cursor: none;
+  cursor: none;
   color: #f1f0eb;
   text-decoration: none;
   font-family: lato;
@@ -240,8 +270,9 @@ body, html {
   font-size: 30px;
   text-align: left;
   transition: 0.2s ease-in-out;
-} 
- .nav_a:hover {
+  opacity: 0.6;
+}
+.nav_a:hover {
   color: rgb(251, 251, 251);
   text-decoration: none;
   font-family: lato;
@@ -249,6 +280,7 @@ body, html {
   transform: scale(1.1);
   transform: translateX(5px);
   font-weight: 100;
+   opacity: 1;
 }
 .container_navButtons {
   display: flex;
@@ -268,76 +300,84 @@ body, html {
 .up:hover {
   cursor: none;
 }
-.wrapper_contact{
+.wrapper_contact {
   width: 70%;
   margin: auto;
   display: flex;
   justify-content: center;
 }
-.contact{
-  display:flex;
+.contact {
+  margin-top: 80px;
+  display: flex;
   flex-direction: column;
   height: 200px;
   width: 100%;
-  align-items: center; 
+  align-items: center;
   align-content: center;
-  justify-content: space-around; 
- border: solid 3px black;
- border-image: linear-gradient(black, blue);
- border-image-slice: 1;
+  justify-content: space-around;
+  border: solid 1px black;
+  border-image: linear-gradient(rgb(150, 59, 59), blue);
+  border-image-slice: 1;
+  box-shadow: 0px 0px 2px white;
+  margin-bottom: 30px;
 }
- .contact h2{
+.contact h2 {
   color: white;
   font-family: lato;
   font-weight: 200;
 }
-.contact_container{
+.contact_container {
   width: 80%;
   display: flex;
   justify-content: space-around;
 }
-.contact_logo{
-  color: #a35f00;
+.contact_logo {
+  color: #6d5582;
   font-size: 16px;
 }
-.contact_text{
+.contact_text {
   justify-content: space-around;
   width: 100px;
   display: flex;
   align-items: center;
   color: white;
-} 
+}
+.mail, .Linkedin, .GitHub, .twitter{
+  font-family: poppins;
+  font-weight: 300;
+  letter-spacing: 0px;
+  font-size: 13px;
+  text-shadow: 0px 0px 1px white;
+}
 
 /* TECHNOS...................... */
 
-.technos{
+.technos {
+  margin-top: 10px;
   width: 60%;
   display: flex;
   justify-content: space-around;
   height: 50px;
   align-items: center;
 }
-.technos:hover{
-  animation :bounce 1.3s ease-in-out;
+.technos:hover {
+  animation: bounce 1.3s ease-in-out;
 }
- .logos:hover{
- animation: bounce .600s ease-in;
- }
+.logos:hover {
+  animation: bounce 0.6s ease-in;
+}
 @keyframes bounce {
-0% {
+  0% {
     transform: translateY(0);
   }
   40% {
     transform: translateY(-20px);
-  
   }
   70% {
     transform: translateY(30px);
- 
   }
-   100% {
+  100% {
     transform: translateY(0px);
- 
   }
 }
 
@@ -358,4 +398,4 @@ body, html {
 }
 .logos:nth-child(6) {
   height: 66%;
-} 
+}
