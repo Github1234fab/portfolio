@@ -5,7 +5,6 @@
 }
 body {
   height: 100vh;
-  /* background-color: white; */
   background: linear-gradient(to left, #f5d1b3, 45%, #f4b783);
 }
 header {
