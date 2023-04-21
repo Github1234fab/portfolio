@@ -73,7 +73,7 @@ cells.forEach((cell) => {
 function playGame(e) {
   const cell = e.target; //récupère chaque cellule..........
   cell.style.transform = "scale(0.9)";
-  cell.style.transition = "transform .200s ease-in-out";
+  cell.style.transition = "transform 1.1s ease-in";
   cell.style.transition = "background-color 1s ease-in-out";
   cell.classList.add(playerOne ? "blue" : "red"); // permet d'alterner en passant la classe appropriée. Si joueur 1 alors blue, sinon red............
   const blueCells = Array.from(document.querySelectorAll("[data-cell].blue"));
