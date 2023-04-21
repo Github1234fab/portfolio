@@ -21,6 +21,11 @@ body{
  background-color: transparent;
    color: white;
     text-shadow: 0px 0px 6px white;
+    transform: scale(1);
+    transition: .100s ease-in-out;
+}
+.change_color_calculator:hover{
+transform: scale(1.2);
 }
 #calculator_container {
   display: flex;
@@ -90,6 +95,9 @@ body{
   box-shadow: 1px 1px 2px 1px black;
   font-family: chivo mono;
   font-size: 9px;
+  transform: scale(1);
+  transition: .100s ease-in-out;
+  text-shadow: 0px 0px 100px white;
 }
 .bouton:hover {
   pointer-events: auto;
@@ -98,6 +106,8 @@ body{
   gap: 10px;
   background: linear-gradient(red, grey);
   box-shadow: 1px 1px 5px 1px black;
+    transform: scale(0.9);
+    text-shadow: 0px 0px 100px white;
 }
 
 #egal {

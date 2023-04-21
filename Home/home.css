@@ -74,7 +74,6 @@ html {
   margin-top: 30px;
   letter-spacing: -10px;
   font-weight: 100;
-  /* color: #ffffff; */
   color: #fff;
 }
 
@@ -96,10 +95,10 @@ html {
   margin-top: -10px;
 }
 .header_name span {
-  transition: color 0.4s;
+  transition: color 0.2s;
 }
 .header_name span:hover {
-  color: rgb(2, 2, 38);
+  color: #a35f00;
   font-size: 16;
 }
 .header_name span:nth-child(1) {
@@ -214,7 +213,8 @@ html {
 
 .overlay1 {
   position: absolute;
-  top: 17px;
+  top: 19px;
+  left: 17px;
   height: 100px;
   width: 100px;
   background-color: blue;
@@ -269,7 +269,7 @@ html {
   color: #f1f0eb;
   text-decoration: none;
   font-family: lato;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 30px;
   text-align: left;
   transition: 0.2s ease-in-out;
@@ -339,6 +339,11 @@ html {
   color: white;
   font-family: lato;
   font-weight: 200;
+  transform: scale(1);
+  transition: .200s ease-in-out;
+}
+.contact h2:hover {
+  transform: scale(1.1)
 }
 .contact_container {
   width: 80%;
