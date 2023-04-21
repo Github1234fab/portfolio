@@ -111,6 +111,7 @@ html {
 }
 
 .developper {
+  width: 40%;
   margin-top: 10px;
   font-family: poppins;
   margin-left: 64px;
@@ -300,12 +301,16 @@ html {
 .up:hover {
   cursor: none;
 }
+
+/* CONTACT.............. */
+
 .wrapper_contact {
   width: 70%;
   margin: auto;
   display: flex;
   justify-content: center;
 }
+
 .contact {
   margin-top: 80px;
   display: flex;
@@ -320,7 +325,13 @@ html {
   border-image-slice: 1;
   box-shadow: 0px 0px 2px white;
   margin-bottom: 30px;
+  transition: 0.6s ease-in-out;
 }
+.contact:hover{
+  box-shadow: 0px 0px 6px white;
+}
+
+
 .contact h2 {
   color: white;
   font-family: lato;
