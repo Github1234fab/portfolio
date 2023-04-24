@@ -347,7 +347,8 @@ html {
   justify-content: space-around;
 }
 .contact_logo {
-  color: rgb(144, 0, 255);
+ 
+  color: #a35f00;
   transition: 0.1s ease-in-out;
   text-shadow: none;
   transform: scale(1);
@@ -355,7 +356,7 @@ html {
 
 }
 .contact_logo:hover {
-  color: rgb(255, 255, 255);
+   color: rgb(144, 0, 255);;
   text-shadow: 0px 0px 20px white;
   transform: scale(1.2);
 }
@@ -395,9 +396,9 @@ html {
   height: 50px;
   align-items: center;
 }
-.technos:hover {
+/* .technos:hover {
   animation: bounce 1.3s ease-in-out;
-}
+} */
 .logos:hover {
   animation: bounce 0.9s ease-in-out;
 }
