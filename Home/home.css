@@ -22,6 +22,7 @@ html {
   position: absolute;
   background-color: transparent;
   pointer-events: none;
+  z-index: 1;
 }
 .cursor::before {
   content: "";
@@ -347,10 +348,11 @@ html {
 }
 .contact_logo {
   color: rgb(144, 0, 255);
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
   text-shadow: none;
   transform: scale(1);
   z-index: 0;
+
 }
 .contact_logo:hover {
   color: rgb(255, 255, 255);
