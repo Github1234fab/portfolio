@@ -3,7 +3,8 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body, html {
+body,
+html {
   cursor: none;
   background-color: #1d1d1d !important;
   height: 100vh;
@@ -60,7 +61,7 @@ body, html {
 
 .main {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 65% 35%;
   grid-template-rows: 15% 70% 15%;
   height: 100%;
 }
@@ -79,9 +80,9 @@ body, html {
 .header_titles {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
   margin-left: 150px;
   margin-top: 50px;
+  justify-content:left ;
 }
 .header_title {
   font-family: lato;
@@ -105,8 +106,8 @@ body, html {
   font-weight: 100;
   letter-spacing: 8px;
   text-transform: lowercase;
-  margin-left: 3px;
-  margin-top: 20px;
+  margin-left: 10px;
+  margin-top: -50px;
 }
 .header_name span {
   transition: color 0.2s;
@@ -124,7 +125,46 @@ body, html {
 .header_name span:nth-child(7) {
   margin-right: 20px;
 }
+.technos {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  margin-top: 10px;
+  width: 30%;
+}
 
+.logos:hover {
+  animation: bounce 0.9s ease-in-out;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.logos:nth-child(1) {
+  height: 65%;
+}
+.logos:nth-child(2) {
+  height: 60%;
+}
+.logos:nth-child(3) {
+  height: 83%;
+}
+.logos:nth-child(4) {
+  height: 60%;
+}
+.logos:nth-child(5) {
+  height: 66%;
+}
+.logos:nth-child(6) {
+  height: 66%;
+}
 /* CONTACT.............. */
 
 .contact {
@@ -132,6 +172,11 @@ body, html {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+.about_title_contact {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }
 .contact_logo {
   color: #a35f00;
@@ -145,6 +190,7 @@ body, html {
   text-shadow: 0px 0px 20px white;
   transform: scale(1.4);
 }
+
 .developper {
   font-family: poppins;
   color: #d6d3cf;
@@ -152,7 +198,7 @@ body, html {
   transition: 0.2s ease-in-out;
   font-size: 20px;
   letter-spacing: 1px;
-  margin-left: 3px;
+  margin-left: 10px;
 }
 .developper:hover {
   color: #cdb8b8;
@@ -172,20 +218,25 @@ body, html {
   flex-direction: column;
   justify-content: space-around;
   transition: 0.9s ease-out;
-  height: 80%;
-  margin-top: 50px;
+  height: 100%;
+  margin-top: 20px;
 }
 .nav_a {
   cursor: none;
   color: #f1f0eb;
   text-decoration: none;
-  font-family: oswald;
-  font-weight: 200;
+  font-family: lato;
+  font-weight: 400;
   font-size: 60px;
   transition: 0.25s ease-in-out;
   text-transform: uppercase;
   letter-spacing: -2px;
   transform: scale(1);
+  /* background-color: #373737; */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background: linear-gradient(to right, transparent, 20%, #373737);
 }
 .nav_a:hover {
   color: rgb(251, 251, 251);
@@ -194,6 +245,7 @@ body, html {
   transform: translateX(5px);
   font-weight: 300;
   transform: scale(1.1);
+  background-color: #a35f00;
 }
 .container_navButtons {
   display: flex;
@@ -266,9 +318,8 @@ body, html {
   font-weight: bold;
   font-size: 40px;
   font-family: lato;
-  color: rgb(144, 0, 255);
+  color: rgb(182, 94, 249);
   font-weight: 100;
-  text-transform: lowercase;
   transform: scale(1);
   transition: 0.4s ease-in-out;
 }
@@ -317,81 +368,86 @@ body, html {
   grid-column-end: 3;
 }
 
-.technos {
-  margin-left: 10px;
-   margin-right: 10px;
-  width: 90%;
-  display: flex;
-  justify-content: space-around;
-  height: 50px;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.logos:hover {
-  animation: bounce 0.9s ease-in-out;
-}
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  10% {
-    transform: translateY(-4px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-.logos:nth-child(1) {
-  height: 65%;
-}
-.logos:nth-child(2) {
-  height: 60%;
-}
-.logos:nth-child(3) {
-  height: 83%;
-}
-.logos:nth-child(4) {
-  height: 60%;
-}
-.logos:nth-child(5) {
-  height: 66%;
-}
-.logos:nth-child(6) {
-  height: 66%;
-}
-
 /* MEDIAQUERIES.................................................................. */
 
-@media screen and (max-width: 2560px) {
-
+@media screen and (max-width: 3048px) {
   .main {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 35% 50% 15%;
-  height: 100%;
-}
-  .header_title{
-   font-size: 170px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 35% 50% 15%;
+    height: 100%;
   }
-   .header_name{
-   font-size: 60px;
+  .header_title {
+    font-size: 150px;
+    letter-spacing: -17px;
   }
-  .developper{
-    font-size: 50px;
+  .header_name {
+    font-size: 60px;
   }
-   .contact_logo{
-    font-size: 90px;
+  .developper {
+    margin-top: 20px;
+    font-size: 36px;
+    font-family: lato;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  .contact {
+    margin-left: 10px;
+    margin-top: -10px;
+  }
+  .contact_logo {
+    font-size: 60px;
     margin-top: 60px;
+    margin-bottom: 30px;
+  
   }
-  .about_h2{
+  .about_h2 {
     font-size: 100px;
+    letter-spacing: 2px;
   }
-   .about_h3{
+  .about_h3 {
     font-size: 40px;
     line-height: 70px;
   }
-  .nav_a{
-    font-size: 120px;
+  .nav_a {
+    font-size: 80px;
+    opacity: 0.7;
+  }
+  .nav_a:hover {
+    opacity: 1;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+  }
+  .technos {
+    margin-left: 70px;
+    display: flex;
+    margin-top: 20px;
+    width: 30%;
+    align-items: center;
+    align-content: center;
+    height: 4%;
+  }
+  .logos:nth-child(1) {
+    height: 190%;
+  }
+  .logos:nth-child(2) {
+    height: 180%;
+  }
+  .logos:nth-child(3) {
+    height: 280%;
+    margin-top: -5px;
+  }
+  .logos:nth-child(4) {
+    height: 200%;
+  }
+  .logos:nth-child(5) {
+    height: 230%;
+  }
+  .logos:nth-child(6) {
+    height: 220%;
   }
 }
