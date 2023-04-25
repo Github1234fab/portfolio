@@ -6,7 +6,6 @@
 body,
 html {
   cursor: none;
-  /* background-color: rgb(2, 2, 41) !important; */
   background-color: #1d1d1d !important;
   height: 100vh;
 }
@@ -58,21 +57,38 @@ html {
   }
 }
 
+/* MAIN ...................... */
+
+.main {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 30% 80%;
+}
+
+
 /* HEADER.............................. */
 
 .header {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
 }
 .header_titles {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* justify-content: space-around; */
+  margin-left: 150px;
+  margin-top: 50px;
+
 }
 .header_title {
   font-family: lato;
   font-size: 55px;
-  margin-left: 60px;
-  margin-top: 30px;
   letter-spacing: -8px;
   font-weight: 100;
   color: #fff;
@@ -92,8 +108,7 @@ html {
   font-weight: 100;
   letter-spacing: 8px;
   text-transform: lowercase;
-  margin-left: 65px;
-  margin-top: -10px;
+  margin-left: 6px;
 }
 .header_name span {
   transition: color 0.2s;
@@ -112,108 +127,86 @@ html {
   margin-right: 20px;
 }
 
-.developper {
-  width: 40%;
-  margin-top: 100px;
-  font-family: poppins;
-  margin-left: 200px;
-  color: #d6d3cf;
-  font-weight: 200;
-  margin-bottom: -10px;
-  transition: 0.2s ease-in-out;
-}
-.developper:hover {
-  color: #cdb8b8;
-}
+/* CONTACT.............. */
 
-/* MAIN ...................... */
-
-.main {
+.contact {
+   margin-top: 40px; 
   display: flex;
-}
-
-/* ABOUT...................... */
-
-.about {
-  margin-top: 0px;
-  margin-left: 120px;
-  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
-
-.about_h2 {
-  margin-top: -68px;
-  font-weight: bold;
-  font-size: 60px;
-  font-family: lato;
-  color: rgb(144, 0, 255);
-  font-weight: 100;
-  text-transform: lowercase;
-  writing-mode: vertical-lr;
-  transform: scale(1);
-  transition: 0.4s ease-in-out;
-  letter-spacing: 0px;
-}
-.about_h2 span:nth-child(6) {
-  text-transform: uppercase;
+.contact_logo {
   color: #a35f00;
+  transition: 0.1s ease-in-out;
+  text-shadow: none;
+  transform: scale(1);
+  z-index: 0;
 }
-.about_h2 span:nth-child(1) {
-  text-transform: uppercase;
-  /* color: #a35f00; */
-}
-.about_h2 span {
-  transition: color 0.3s;
-}
-.about_h2 span:hover {
-  color: #dddadf;
-  transform: scale(1.2);
+.contact_logo:hover {
+  color: rgb(144, 0, 255);
+  text-shadow: 0px 0px 20px white;
+  transform: scale(1.4);
 }
 
-/* NAV...................... */
-
-.about_h3 {
+/* NAV......................................................... */
+.wrapper_nav {
   position: relative;
-  width: 60%;
-  font-size: 12px;
-  font-family: poppins;
-  line-height: 20px;
-  font-weight: 100;
-  color: white;
-  text-align: justify;
-  transition: 1s ease-in-out;
-  border-radius: 2px;
-  height: 240px;
-  padding: 20px;
-  cursor: pointer;
-  padding: 10px;
-  opacity: 0.6;
+  margin-right: 150px;
+  margin-top: 150px;
+   z-index: 9999;
+    grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
-.about_h3:hover {
-  opacity: 1;
-}
-
-/* .about_h3::-webkit-scrollbar {
-  width: 8px;
-}
-.about_h3::-webkit-scrollbar-track {
-  box-shadow: 1px 1px 3px black;
-  border-radius: 5px 8px;
-}
-.about_h3::-webkit-scrollbar-thumb {
-  background-color: #a35f00;
-  box-shadow: inset 1px 1px 3px black;
-  border-radius: 5px 20px;
-}
-.about_h3::-webkit-scrollbar-thumb:hover {
-  background-color: #a9a9a7;
-} */
-
-.container_nav {
+.nav {
+  position: relative;
   display: flex;
-}
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.9s ease-out;
+    height: 100vh;
 
-.overlay1 {
+}
+.nav_a {
+  cursor: none;
+  color: #f1f0eb;
+  text-decoration: none;
+  font-family: lato;
+  font-weight: 200;
+  font-size: 30px;
+  transition: 0.25s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  transform: scale(1);
+}
+.nav_a:hover {
+  color: rgb(251, 251, 251);
+  text-decoration: none;
+  font-family: lato;
+  transform: translateX(5px);
+  font-weight: 300;
+  transform: scale(1.1);
+}
+.container_navButtons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+.down,
+.up {
+  transition: 0.2s ease-in-out;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  text-shadow: 0px 0px 70px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255), 0px 0px 60px rgb(255, 255, 255), 0px 0px 80px rgb(255, 255, 255), 0px 0px 100px rgb(255, 255, 255);
+}
+.down:hover,
+.up:hover {
+  cursor: none;
+}
+/* .overlay1 {
   position: absolute;
   top: 50px;
   left: 17px;
@@ -243,152 +236,93 @@ html {
   background-color: rgb(85, 73, 80);
   opacity: 0.5;
   z-index: -5;
+} */
+
+
+
+
+
+
+/* ABOUT..................................................... */
+.about_container_text{
+display: flex;
 }
-.wrapper_nav {
-  position: relative;
-  width: 70%;
-  margin-top: 40px;
-}
-.nav {
-  margin-left: 20px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  transition: 0.9s ease-out;
-  height: 100%;
-  z-index: 9999;
-  width: 70%;
-}
-.nav_a {
-  cursor: none;
-  color: #f1f0eb;
-  text-decoration: none;
-  font-family: lato;
+/* developpeur......................................................... */
+.developper {
+  font-family: poppins;
+  margin-left: 120px;
+  color: #d6d3cf;
   font-weight: 200;
-  font-size: 35px;
-  transition: 0.250s ease-in-out;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  transform: scale(1);
-}
-.nav_a:hover {
-  color: rgb(251, 251, 251);
-  text-decoration: none;
-  font-family: lato;
-  transform: translateX(5px);
-  font-weight: 300;
-   transform: scale(1.1);
-
-}
-.container_navButtons {
-  display: flex;
-  flex-direction: row;
-  margin-left: 10px;
-}
-.down,
-.up {
+  margin-bottom: -10px;
   transition: 0.2s ease-in-out;
-  color: white;
-  background-color: transparent;
-  border: none;
-  font-size: 40px;
-  text-shadow: 0px 0px 70px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255), 0px 0px 60px rgb(255, 255, 255), 0px 0px 80px rgb(255, 255, 255), 0px 0px 100px rgb(255, 255, 255);
 }
-.down:hover,
-.up:hover {
-  cursor: none;
+.developper:hover {
+  color: #cdb8b8;
 }
-
-/* CONTACT.............. */
-
-.wrapper_contact {
-  width: 100%;
+.about {
+  margin: auto;
+  width: 40%;
   display: flex;
-  margin-left: 10px;
   flex-direction: column;
-  margin-left: 190px;
-  /* align-items: flex-start;
-  justify-content: flex-start;
-  align-content: flex-start; */
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2 ;
 }
-/* .contact_title {
 
-  margin-left: 0px;
+.about_h2 {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
   font-family: lato;
   color: rgb(144, 0, 255);
   font-weight: 100;
   text-transform: lowercase;
+  writing-mode: vertical-lr;
   transform: scale(1);
   transition: 0.4s ease-in-out;
 }
-.contact_title span:nth-child(8) {
+.about_h2 span:nth-child(6) {
   text-transform: uppercase;
   color: #a35f00;
 }
-.contact_title span:nth-child(1) {
+.about_h2 span:nth-child(1) {
   text-transform: uppercase;
-
+  /* color: #a35f00; */
 }
-.contact_title span {
+.about_h2 span {
   transition: color 0.3s;
 }
-.contact_titlespan:hover {
+.about_h2 span:hover {
   color: #dddadf;
   transform: scale(1.2);
-} */
-.contact {
-  margin-left: 46px;
-  margin-top: 30px;
-  display: flex;
-  width: 50%;
-  justify-content: space-around;
 }
-.contact_logo {
-  color: #a35f00;
-  transition: 0.1s ease-in-out;
-  text-shadow: none;
-  transform: scale(1);
-  z-index: 0;
 
-}
-.contact_logo:hover {
-   color: rgb(144, 0, 255);;
-  text-shadow: 0px 0px 20px white;
-  transform: scale(1.4);
-}
-.contact_text {
-  justify-content: space-around;
-  width: 100px;
-  display: flex;
-  align-items: center;
+.about_h3 {
+  width: 80%;
+  font-size: 14px;
+  font-family: poppins;
+  line-height: 20px;
+  font-weight: 100;
+  color: white;
+  text-align: justify;
+  transition: 1s ease-in-out;
+  border-radius: 2px;
+  height: 240px;
   opacity: 0.6;
 }
-.contact_text:hover {
+.about_h3:hover {
   opacity: 1;
 }
 
-.contact_click {
-  transform: scale(1);
-  font-family: poppins;
-  font-weight: 300;
-  letter-spacing: 0px;
-  font-size: 13px;
-  transition: 0.1s ease-in-out;
-  color: rgb(144, 0, 255);
-}
-.contact_click:hover {
-  color: white;
-  transform: scale(1.2);
+.container_nav {
+  display: flex;
 }
 
 /* TECHNOS...................... */
 
 .technos {
   margin-top: 10px;
-  margin-left: 170px;
+  margin-left: 96px;
   width: 64%;
   display: flex;
   justify-content: space-around;
@@ -429,4 +363,46 @@ html {
 }
 .logos:nth-child(6) {
   height: 66%;
+}
+
+/* MEDIAQUERIES.................................................................. */
+
+@media screen and (max-width: 1024px) {
+  .nav {
+    margin-left: 50px;
+  }
+  /* .about{
+  margin-top: 20px;
+} */
+  .about_h2 {
+    letter-spacing: 3px;
+  }
+  .developper {
+    margin-top: 130px;
+  }
+  .technos {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper_nav {
+    display: none;
+  }
+  .about_h2 {
+    letter-spacing: 3px;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin: auto;
+  }
+  .about_h3 {
+    width: 60%;
+    margin: auto;
+  }
+  .developper {
+    margin-top: 130px;
+  }
+  .technos {
+    margin-top: 20px;
+  }
 }
