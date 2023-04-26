@@ -17,7 +17,7 @@ html {
   width: 15px;
   border-radius: 50%;
   cursor: none;
-  border: solid 3px white;
+  border: solid 2px white;
   position: absolute;
   background-color: transparent;
   pointer-events: none;
@@ -62,8 +62,9 @@ html {
 .main {
   display: grid;
   grid-template-columns: 65% 35%;
-  grid-template-rows: 30% 60% 15%;
+  grid-template-rows: 40% 50% 15%;
   height: 100vh;
+  position: relative;
 }
 
 /* HEADER.............................. */
@@ -78,6 +79,13 @@ html {
   grid-column-start: 1;
   grid-column-end: 2;
 }
+.avion {
+  /* height: 300px;
+  width: 300px; */
+  color: yellow;
+  margin-top: 30px;
+
+}
 .header_titles {
   display: flex;
   align-items: flex-start;
@@ -86,14 +94,14 @@ html {
   justify-content: space-around;
 }
 .header_title {
-  font-family: manrope;
-  font-size: clamp(14px, 5vw, 120px);
-  font-weight: 300;
-  color: #fff;
-  background-clip: text;
+  font-family: oswald;
+  font-size: clamp(20px, 5vw, 30px);
+  font-weight: 100;
+  color: #ffffff;
+  /* background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(to top, rgb(144, 0, 255), 30%, white);
-  color: transparent;
+ background-image: linear-gradient(to top, #f5af19,white);
+  color: transparent; */
 }
 
 .header_name {
@@ -129,7 +137,8 @@ html {
   color: #d6d3cf;
   font-weight: 100;
   transition: 0.2s ease-in-out;
-  font-size: clamp(12px, 2vw, 80px);
+  font-size: clamp(14px, 1vw, 20px);
+  margin-top: -5px;
 }
 .developper:hover {
   color: #cdb8b8;
@@ -138,7 +147,7 @@ html {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: clamp(20px, 5vw, 40px);
+  height: clamp(18px, 5vw, 28px);
   align-items: center;
   z-index: 0;
   gap: 10px;
@@ -202,7 +211,7 @@ html {
   text-decoration: none;
   font-family: lato;
   font-weight: 400;
-  font-size: clamp(14px, 3vw, 80px);
+  font-size: clamp(14px, 1vw, 25px);
   transition: 0.4s ease-in-out;
   text-transform: uppercase;
   transform: scale(1) translateX(0px);
@@ -248,7 +257,7 @@ html {
   grid-column-end: 2;
   margin-left: 100px;
 }
-.container_about{
+.container_about {
   margin-top: 30px;
 }
 .wrapper_h2_logos {
@@ -259,14 +268,17 @@ html {
 }
 
 .about_h2 {
-  /* letter-spacing: 31px; */
   font-weight: bold;
-  font-size: clamp(18px, 5vw, 34px);
+  font-size: clamp(18px, 5vw, 22px);
   font-family: lato;
-  color: rgb(182, 94, 249);
+  /* color: rgb(182, 94, 249); */
   font-weight: 300;
   transform: scale(1);
   transition: 0.4s ease-in-out;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to top, #05024d, 20%, rgb(188, 186, 186));
+  color: transparent;
 }
 /* .contact_logos {
   display: flex;
@@ -274,12 +286,12 @@ html {
   width: 70%;
 } */
 .contact_logo {
-  color: #a35f00;
+  color: #474753;
   transition: 0.1s ease-in-out;
   text-shadow: none;
   transform: scale(1);
   z-index: 0;
-  font-size: clamp(10px, 3vw, 30px);
+  font-size: clamp(10px, 3vw, 20px);
 }
 .contact_logo:hover {
   color: rgb(144, 0, 255);
@@ -291,7 +303,7 @@ html {
   margin-top: 20px;
   width: 90%;
   /* font-size: 12px; */
-  font-size: clamp(12px, 5vw, 14px);
+  font-size: clamp(12px, 1vw, 14px);
   font-family: poppins;
   line-height: 25px;
   font-weight: 100;

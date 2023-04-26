@@ -68,23 +68,21 @@ document.addEventListener("click", () => {
 //   homeAboutH3.classList.add("home_about_hidden");
 // });
 
-
 // Récupérer l'élément about_h3
 const aboutH3 = document.getElementById("aboutMe");
 
 // Ajouter un écouteur d'événement scroll à la div about_h3
-aboutH3.addEventListener('scroll', () => {
+aboutH3.addEventListener("scroll", () => {
   // Récupérer la position de l'élément about_h3 par rapport au haut de la div
   const aboutH3Top = aboutH3.scrollTop;
 
   // Si l'élément about_h3 est proche du bord supérieur de la div, ajouter une opacité
   if (aboutH3Top > 0 && aboutH3Top < aboutH3.clientHeight - window.innerHeight * 0.3) {
-    aboutH3.style.opacity = '0.5';
+    aboutH3.style.opacity = "0.5";
   } else {
-    aboutH3.style.opacity = '1';
+    aboutH3.style.opacity = "1";
   }
 });
-
 
 //     <!-- <div class="electric_line" id="electricLine"></div>
 // <div id="container_bubbles" >
@@ -172,3 +170,15 @@ aboutH3.addEventListener('scroll', () => {
 //      }
 //    }, interval);
 //   }
+
+let avion = document.getElementsByClassName("avion");
+console.log(avion);
+ gsap.to(".avion", {
+   duration: 30,
+   x: 700, 
+  repeat: -1,
+ });
+
+
+ let svgElement = document.querySelector("svg path");
+ svgElement.setAttribute("fill", "red");
