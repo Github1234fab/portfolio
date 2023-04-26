@@ -3,7 +3,8 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body, html{
+body,
+html {
   cursor: none;
   background-color: #1d1d1d !important;
   height: 100vh;
@@ -61,15 +62,16 @@ body, html{
 .main {
   display: grid;
   grid-template-columns: 65% 35%;
-  grid-template-rows: 25% 60% 15%;
-  height: 100%;
+  grid-template-rows: 30% 60% 15%;
+  height: 100vh;
 }
 
 /* HEADER.............................. */
 
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
   grid-row-start: 1;
   grid-row-end: 2;
@@ -78,24 +80,20 @@ body, html{
 }
 .header_titles {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  margin-left: 50px;
-  margin-top: 50px;
+  margin-left: 30px;
   justify-content: space-around;
 }
 .header_title {
-  font-family: lato;
-  font-size: clamp(18px, 5vw, 120px);
-  letter-spacing: -2px;
+  font-family: manrope;
+  font-size: clamp(14px, 5vw, 120px);
   font-weight: 300;
   color: #fff;
-}
-
-.header_title span {
-  transition: color 0.1s;
-}
-.header_title span:hover {
-  color: rgb(144, 0, 255);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to top, rgb(144, 0, 255), 30%, white);
+  color: transparent;
 }
 
 .header_name {
@@ -103,7 +101,6 @@ body, html{
   font-size: clamp(12px, 3vw, 55px);
   font-family: lato;
   font-weight: 300;
-  text-transform: lowercase;
 }
 /* .header_name span {
   transition: color 0.2s;
@@ -122,18 +119,17 @@ body, html{
   margin-right: 20px;
 } */
 
-.container_developper{
+.container_developper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .developper {
   font-family: poppins;
   color: #d6d3cf;
-  font-weight: 200;
+  font-weight: 100;
   transition: 0.2s ease-in-out;
-   font-size: clamp(12px, 2vw, 80px);
-  /* letter-spacing: 1px; */
+  font-size: clamp(12px, 2vw, 80px);
 }
 .developper:hover {
   color: #cdb8b8;
@@ -141,22 +137,23 @@ body, html{
 .technos {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: clamp(20px, 5vw, 40px);
   align-items: center;
-  margin: auto;
   z-index: 0;
+  gap: 10px;
+  margin-left: -10px;
 }
 
 .logos:hover {
-  animation: bounce 0.9s ease-in-out;
+  animation: bounce 0.5s ease-in-out;
 }
 @keyframes bounce {
   0% {
     transform: translateY(0);
   }
   10% {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
   }
   100% {
     transform: translateY(0px);
@@ -182,10 +179,10 @@ body, html{
 }
 
 /* NAV......................................................... */
-   
+
 .wrapper_nav {
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 3;
   margin-right: -25px;
@@ -193,7 +190,7 @@ body, html{
 .nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   transition: 0.9s ease-out;
   height: 100%;
   margin-top: 20px;
@@ -206,9 +203,9 @@ body, html{
   font-family: lato;
   font-weight: 400;
   font-size: clamp(14px, 3vw, 80px);
-  transition: 0.25s ease-in-out;
+  transition: 0.4s ease-in-out;
   text-transform: uppercase;
-  transform: scale(1) rotate(0deg) translateX(0px);
+  transform: scale(1) translateX(0px);
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -218,9 +215,9 @@ body, html{
   color: rgb(251, 251, 251);
   text-decoration: none;
   font-family: lato;
-  font-weight: 300;
-  transform: scale(1.1) rotate(1deg) translateX(2px);
-   background: linear-gradient(to right, transparent, 40%, #a35f00, transparent);
+  font-weight: 900;
+  transform: scale(1.1) translateX(2px);
+  background: linear-gradient(to right, transparent, 40%, #a35f00, transparent);
 }
 .container_navButtons {
   display: flex;
@@ -245,27 +242,23 @@ body, html{
 .about {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
   margin-left: 100px;
- 
 }
 .wrapper_h2_logos {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 250px;
   align-items: flex-start;
-  margin-top: 200px;
 }
 
 .about_h2 {
   /* letter-spacing: 31px; */
   font-weight: bold;
-  font-size: clamp(40px, 5vw, 200px);
+  font-size: clamp(20px, 5vw, 200px);
   font-family: lato;
   color: rgb(182, 94, 249);
   font-weight: 300;
@@ -283,7 +276,7 @@ body, html{
   text-shadow: none;
   transform: scale(1);
   z-index: 0;
-  font-size: clamp(20px, 3vw, 120px);
+  font-size: clamp(10px, 3vw, 120px);
 }
 .contact_logo:hover {
   color: rgb(144, 0, 255);
@@ -294,12 +287,13 @@ body, html{
 .about_h3 {
   margin-top: 20px;
   width: 90%;
-  font-size: clamp(12px, 3vw, 34px);
-  font-family: lato;
-  /* line-height: 40px; */
-  font-weight: 300;
+  /* font-size: 12px; */
+  font-size: clamp(12px, 5vw, 14px);
+  font-family: poppins;
+  line-height: 25px;
+  font-weight: 100;
   color: white;
-  text-align: justify;
+  text-align: left;
   transition: 1s ease-in-out;
   opacity: 0.6;
 }
