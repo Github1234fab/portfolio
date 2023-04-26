@@ -171,14 +171,30 @@ aboutH3.addEventListener("scroll", () => {
 //    }, interval);
 //   }
 
+const tm = gsap.timeline();
 let avion = document.getElementsByClassName("avion");
 console.log(avion);
- gsap.to(".avion", {
-   duration: 30,
-   x: 700, 
+
+tm.to(".avion", {
+  duration: 67,
+  x: 820,
+  overlap: 10,
+  ease: Sine,
   repeat: -1,
- });
-
-
- let svgElement = document.querySelector("svg path");
- svgElement.setAttribute("fill", "red");
+});
+// .to(".avion", {
+//   duration: 4,
+//   x: 100,
+//   y: -15,
+//   overlap: -4,
+// })
+// .to(".avion", {
+//   duration: 4,
+//   x: 130,
+//   y: 15,
+// })
+// .to(".avion", {
+//   duration: 4,
+//   x: 180,
+//   y: -4,
+// });

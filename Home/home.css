@@ -17,7 +17,7 @@ html {
   width: 15px;
   border-radius: 50%;
   cursor: none;
-  border: solid 2px white;
+  border: solid 2px #7c7a97;
   position: absolute;
   background-color: transparent;
   pointer-events: none;
@@ -62,7 +62,7 @@ html {
 .main {
   display: grid;
   grid-template-columns: 65% 35%;
-  grid-template-rows: 40% 50% 15%;
+  grid-template-rows: 50% 50%;
   height: 100vh;
   position: relative;
 }
@@ -80,10 +80,14 @@ html {
   grid-column-end: 2;
 }
 .avion {
-  /* height: 300px;
-  width: 300px; */
+  height: 40px;
+  width: 60px;
   color: yellow;
   margin-top: 30px;
+   grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
 
 }
 .header_titles {
@@ -110,22 +114,6 @@ html {
   font-family: lato;
   font-weight: 300;
 }
-/* .header_name span {
-  transition: color 0.2s;
-}
-.header_name span:hover {
-  color: #a35f00;
-  font-size: 16;
-}
-.header_name span:nth-child(1) {
-  text-transform: uppercase;
-}
-.header_name span:nth-child(8) {
-  text-transform: uppercase;
-}
-.header_name span:nth-child(7) {
-  margin-right: 20px;
-} */
 
 .container_developper {
   display: flex;
@@ -134,7 +122,7 @@ html {
 }
 .developper {
   font-family: poppins;
-  color: #d6d3cf;
+  color: #7e7f9f;
   font-weight: 100;
   transition: 0.2s ease-in-out;
   font-size: clamp(14px, 1vw, 20px);
@@ -212,13 +200,13 @@ html {
   font-family: lato;
   font-weight: 400;
   font-size: clamp(14px, 1vw, 25px);
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
   text-transform: uppercase;
   transform: scale(1) translateX(0px);
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  background: linear-gradient(to right, transparent, 20%, #373737);
+  background: linear-gradient(to right, transparent, 40%, #373737);
 }
 .nav_a:hover {
   color: rgb(251, 251, 251);
@@ -226,7 +214,7 @@ html {
   font-family: lato;
   font-weight: 900;
   transform: scale(1.1) translateX(2px);
-  background: linear-gradient(to right, transparent, 40%, #a35f00, transparent);
+  background: linear-gradient(to right, transparent, 40%, #1e1e38, transparent);
 }
 .container_navButtons {
   display: flex;
@@ -263,7 +251,7 @@ html {
 .wrapper_h2_logos {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -280,13 +268,9 @@ html {
   background-image: linear-gradient(to top, #05024d, 20%, rgb(188, 186, 186));
   color: transparent;
 }
-/* .contact_logos {
-  display: flex;
-  justify-content: space-around;
-  width: 70%;
-} */
+
 .contact_logo {
-  color: #474753;
+  color: #6a6a7b;
   transition: 0.1s ease-in-out;
   text-shadow: none;
   transform: scale(1);
@@ -294,8 +278,8 @@ html {
   font-size: clamp(10px, 3vw, 20px);
 }
 .contact_logo:hover {
-  color: rgb(144, 0, 255);
-  text-shadow: 0px 0px 1px white;
+   color: #6a6a7b;
+  /* text-shadow: 0px 0px 1px white; */
   transform: scale(1.2);
 }
 
@@ -331,84 +315,9 @@ html {
 
 /* MEDIAQUERIES.................................................................. */
 
-/* @media screen and (max-width: 3048px) {
-  .main {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 35% 50% 15%;
-    height: 100%;
-  }
-  .header_title {
-    font-size: 150px;
-    letter-spacing: -17px;
-  }
-  .header_name {
-    font-size: 60px;
-  }
-  .developper {
-    margin-top: 20px;
-    font-size: 36px;
-    font-family: lato;
-    margin-bottom: 20px;
-    font-weight: 300;
-  }
-  .contact {
-    margin-left: 10px;
-    margin-top: -10px;
-  }
-  .contact_logo {
-    font-size: 60px;
-    margin-top: 60px;
-    margin-bottom: 30px;
-  
-  }
-  .about_h2 {
-    font-size: 100px;
-    letter-spacing: 2px;
-  }
-  .about_h3 {
-    font-size: 40px;
-    line-height: 70px;
-  }
-  .nav_a {
-    font-size: 80px;
-    opacity: 0.7;
-  }
-  .nav_a:hover {
-    opacity: 1;
-  }
-  .footer {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: flex-end;
-  }
-  .technos {
-    margin-left: 70px;
-    display: flex;
-    margin-top: 20px;
-    width: 30%;
-    align-items: center;
-    align-content: center;
-    height: 4%;
-  }
-  .logos:nth-child(1) {
-    height: 190%;
-  }
-  .logos:nth-child(2) {
-    height: 180%;
-  }
-  .logos:nth-child(3) {
-    height: 280%;
-    margin-top: -5px;
-  }
-  .logos:nth-child(4) {
-    height: 200%;
-  }
-  .logos:nth-child(5) {
-    height: 230%;
-  }
-  .logos:nth-child(6) {
-    height: 220%;
-  }
-} */
+/* @media screen and (max-width: 695px) {
+ .wrapper_nav {
+  margin-right: -10px;
+}
+}
+  */

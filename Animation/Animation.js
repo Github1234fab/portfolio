@@ -232,7 +232,6 @@ let plane = tmPlane
       duration: 3,
     })
   )
-
   .add(
     gsap.to(".plane", {
       x: 800,
