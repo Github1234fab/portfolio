@@ -5,6 +5,8 @@ const score = document.getElementById("score");
 const blueScore = document.getElementById("blueScore");
 const redScore = document.getElementById("redScore");
 const power = document.getElementById("power");
+const containerCells = document.getElementsByClassName("container_cells");
+console.log(containerCells);
 
 //fLes deux index stockés en dehors de playGme()......................................................
 
@@ -27,10 +29,16 @@ reload.addEventListener("click", (el) => {
 
 let gameIsOn = false;
 
+function playSound() {
+  const audio = new Audio("https://www.soundjay.com/button/button-3.mp3");
+  audio.play();
+}
+
+
 power.addEventListener("click", () => {
   gameIsOn = !gameIsOn;
   power.style.color = gameIsOn ? "black" : "white";
-  power.style.textShadow = gameIsOn ? "none" : "0px 0px 4px white";
+  power.style.textShadow = gameIsOn ? "none" : "0px 0px 6px white";
   if (power.style.color === "white") {
     reload.classList.add("hidden_reload");
     gameState.classList.add("hidden_reload");
@@ -78,6 +86,8 @@ function playGame(e) {
   cell.classList.add(playerOne ? "blue" : "red"); // permet d'alterner en passant la classe appropriée. Si joueur 1 alors blue, sinon red............
   const blueCells = Array.from(document.querySelectorAll("[data-cell].blue"));
   const redCells = Array.from(document.querySelectorAll("[data-cell].red"));
+ 
+  playSound(); 
 
   // transforme le scale........................................................
 
@@ -131,6 +141,7 @@ function playGame(e) {
     gameState.innerHTML = "Blues wins!!";
     indexBlue++;
     blueScore.innerHTML = indexBlue;
+    console.log("ok");
   } else if (isRedWinner === true) {
     gameState.innerHTML = "Reds wins!!";
     indexRed++;
