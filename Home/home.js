@@ -69,20 +69,20 @@ document.addEventListener("click", () => {
 // });
 
 // Récupérer l'élément about_h3
-const aboutH3 = document.getElementById("aboutMe");
+// const aboutH3 = document.getElementById("aboutMe");
 
 // Ajouter un écouteur d'événement scroll à la div about_h3
-aboutH3.addEventListener("scroll", () => {
-  // Récupérer la position de l'élément about_h3 par rapport au haut de la div
-  const aboutH3Top = aboutH3.scrollTop;
+// aboutH3.addEventListener("scroll", () => {
+//   // Récupérer la position de l'élément about_h3 par rapport au haut de la div
+//   const aboutH3Top = aboutH3.scrollTop;
 
-  // Si l'élément about_h3 est proche du bord supérieur de la div, ajouter une opacité
-  if (aboutH3Top > 0 && aboutH3Top < aboutH3.clientHeight - window.innerHeight * 0.3) {
-    aboutH3.style.opacity = "0.5";
-  } else {
-    aboutH3.style.opacity = "1";
-  }
-});
+//   // Si l'élément about_h3 est proche du bord supérieur de la div, ajouter une opacité
+//   if (aboutH3Top > 0 && aboutH3Top < aboutH3.clientHeight - window.innerHeight * 0.3) {
+//     aboutH3.style.opacity = "0.5";
+//   } else {
+//     aboutH3.style.opacity = "1";
+//   }
+// });
 
 //     <!-- <div class="electric_line" id="electricLine"></div>
 // <div id="container_bubbles" >
@@ -147,54 +147,125 @@ aboutH3.addEventListener("scroll", () => {
 //  black.classList.add("white")
 // }, 2000);
 
-//   let containerBubbles = document.getElementById("container_bubbles");
-// console.log(containerBubbles);
+// const containerBubbles = document.getElementById("container_bubbles");
 
-// for (let i = 0; i < 35; i++){
-//   let bubble = document.createElement("div");
+// // créer une fonction pour générer une bulle
+// function createBubble() {
+//   const bubble = document.createElement("div");
 //   bubble.classList.add("bubble");
-//   let bubbleSize = Math.random() + 0.5;
-//     bubble.style.width = bubbleSize * 20 + "px";
-//     bubble.style.height = bubbleSize * 20 + "px";
-//   let bubblesOpacity = Math.random() + 0.5;
-//   bubble.style.opacity = bubblesOpacity;
-//   // bubble.style.opacity = Math.random();
+
+//   // définir une taille et une opacité aléatoires pour chaque bulle
+//   const bubbleSize = Math.random() * 10 + 10;
+//   const bubbleOpacity = Math.random() * 0.5 + 0.5;
+
+//   bubble.style.width = `${bubbleSize}px`;
+//   bubble.style.height = `${bubbleSize}px`;
+//   bubble.style.opacity = bubbleOpacity;
+
+//   // ajouter la bulle au conteneur
 //   containerBubbles.appendChild(bubble);
-//    let interval = Math.random() * 1000 + 500;
-//    setInterval(function () {
-//      // alterner entre les opacités 0 et 1
-//      if (bubble.style.opacity == "0") {
-//        bubble.style.opacity = "1";
-//      } else {
-//        bubble.style.opacity = "0";
-//      }
-//    }, interval);
+
+//   // créer un intervalle aléatoire pour chaque bulle
+//   const interval = Math.random() * 1000 + 500;
+
+//   // créer une fonction pour modifier l'opacité de la bulle
+//   function toggleOpacity() {
+//     bubble.style.opacity = bubble.style.opacity === "0" ? "1" : "0";
+//     requestAnimationFrame(toggleOpacity);
 //   }
 
-const tm = gsap.timeline();
-let avion = document.getElementsByClassName("avion");
-console.log(avion);
+//   // démarrer l'animation de la bulle
+//   toggleOpacity();
 
-tm.to(".avion", {
-  duration: 67,
-  x: 820,
-  overlap: 10,
-  ease: Sine,
-  repeat: -1,
-});
-// .to(".avion", {
-//   duration: 4,
-//   x: 100,
-//   y: -15,
-//   overlap: -4,
-// })
-// .to(".avion", {
-//   duration: 4,
-//   x: 130,
-//   y: 15,
-// })
-// .to(".avion", {
-//   duration: 4,
-//   x: 180,
-//   y: -4,
+//   // supprimer la bulle du DOM après un certain temps
+//   setTimeout(() => {
+//     bubble.remove();
+//   }, interval * 10);
+// }
+
+// // générer un nombre fixe de bulles
+// for (let i = 0; i < 35; i++) {
+//   createBubble();
+
+// const tm = gsap.timeline();
+// let avion = document.getElementsByClassName("avion");
+// console.log(avion);
+
+// tm.to(".avion", {
+//   duration: 67,
+//   x: 820,
+//   ease: Sine,
+//   repeat: -1,
 // });
+
+const tm = gsap.timeline({ repeat: 2 });
+
+tm.add(
+  gsap.to(".avion", {
+    x: 80,
+    duration: 2,
+    ease: "none",
+  })
+)
+  .add(
+    gsap.to(".avion", {
+      x: 120,
+      y: 120,
+      ease: "none",
+      duration: 2,
+    })
+  )
+  .add(
+    gsap.to(".avion", {
+      x: 150,
+      ease: "none",
+      duration: 0.76,
+    })
+  )
+  .add(
+    gsap.to(".avion", {
+      x: 240,
+      y: -70,
+      ease: "none",
+      duration: 3,
+    })
+  )
+  .add(
+    gsap.to(".avion", {
+      x: 274,
+      ease: "none",
+      duration: 0.75,
+    })
+  )
+  .add(
+    gsap.to(".avion", {
+      x: 300,
+      y: 123,
+      ease: "none",
+      duration: 2,
+    })
+  )
+  .add(
+    gsap.to(".avion", {
+      x: 390,
+      y: 0,
+      ease: "none",
+      duration: 2,
+    })
+  )
+  .add(
+    gsap.to(".avion", {
+      x: 460,
+      y: 24,
+      ease: "none",
+      duration: 2,
+    })
+  )
+  .add(
+    gsap.to(".avion", {
+      x: 569,
+      y: -124,
+      ease: "none",
+      duration: 2,
+    })
+  );

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./calculatrice.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./calculatrice.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Rubik+Pixels&display=swap" rel="stylesheet" />
 
@@ -12,62 +12,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/34232c07fe.js" crossorigin="anonymous"></script>
 
     <title>Document</title>
-</head>
-<body>
-      <div class="calculatrice">
-        <div class="animation_title"><h2>Calculator</h2></div>
-        <div class="calculator_buttons_actions">
-          <button class="change_color_calculator" id="CYB"><i class="fa-solid fa-paint-roller fa-2xl"></i></button>
-        </div>
-        <div id="calculator_container">
-          <div id="background"></div>
-          <div id="ecran"></div>
+  </head>
+  <body>
+    <div class="calculatrice">
+      <a href="../Home/home.html"><i class="fa-solid fa-house home"></i></a>
 
-          <div id="container_calculatrice">
-            <div id="boutons">
-              <div id="container">
-                <button class="bouton" value="7">7</button>
-                <button class="bouton" value="8">8</button>
-                <button class="bouton" value="9">9</button>
-                <button class="bouton" value="/">/</button>
-              </div>
+      <div class="animation_title"><h2>Calculator</h2></div>
+      <div class="calculator_buttons_actions">
+        <button class="change_color_calculator" id="CYB"><i class="fa-solid fa-paint-roller fa-2xl"></i></button>
+      </div>
+      <div id="calculator_container">
+        <div id="background"></div>
+        <div id="ecran"></div>
 
-              <div id="container2">
-                <button class="bouton" value="4">4</button>
-                <button class="bouton" value="5">5</button>
-                <button class="bouton" value="6">6</button>
-                <button class="bouton" value="*">*</button>
-              </div>
-
-              <div id="container3">
-                <button class="bouton" value="1">1</button>
-                <button class="bouton" value="2">2</button>
-                <button class="bouton" value="3">3</button>
-                <button class="bouton" value="-">-</button>
-              </div>
-
-              <div id="container4">
-                <button class="bouton" value="0">0</button>
-                <button class="bouton" value=".">.</button>
-                <button id="egal" name="bouton" value="=">=</button>
-                <button class="bouton" value="+">+</button>
-              </div>
-              <div id="container5">
-                <button id="initialize" onclick="reset()">C</button>
-              </div>
-              <!-- <div class="technology">html/css/js</div> -->
+        <div id="container_calculatrice">
+          <div id="boutons">
+            <div id="container">
+              <button class="bouton" value="7">7</button>
+              <button class="bouton" value="8">8</button>
+              <button class="bouton" value="9">9</button>
+              <button class="bouton" value="/">/</button>
             </div>
+
+            <div id="container2">
+              <button class="bouton" value="4">4</button>
+              <button class="bouton" value="5">5</button>
+              <button class="bouton" value="6">6</button>
+              <button class="bouton" value="*">*</button>
+            </div>
+
+            <div id="container3">
+              <button class="bouton" value="1">1</button>
+              <button class="bouton" value="2">2</button>
+              <button class="bouton" value="3">3</button>
+              <button class="bouton" value="-">-</button>
+            </div>
+
+            <div id="container4">
+              <button class="bouton" value="0">0</button>
+              <button class="bouton" value=".">.</button>
+              <button id="egal" name="bouton" value="=">=</button>
+              <button class="bouton" value="+">+</button>
+            </div>
+            <div id="container5">
+              <button id="initialize" onclick="reset()">C</button>
+            </div>
+            <!-- <div class="technology">html/css/js</div> -->
           </div>
         </div>
-        
       </div>
-    <script src="./calculatrice.js"></script> 
-</body>
+    </div>
+    <script src="./calculatrice.js"></script>
+  </body>
 </html>
