@@ -210,7 +210,7 @@ tm.add(
   .add(
     gsap.to(".avion", {
       x: 120,
-      y: 120,
+      y: 60,
       ease: "none",
       duration: 2,
     })

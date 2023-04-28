@@ -34,7 +34,6 @@ function playSound() {
   audio.play();
 }
 
-
 power.addEventListener("click", () => {
   gameIsOn = !gameIsOn;
   power.style.color = gameIsOn ? "black" : "white";
@@ -86,8 +85,8 @@ function playGame(e) {
   cell.classList.add(playerOne ? "blue" : "red"); // permet d'alterner en passant la classe appropriée. Si joueur 1 alors blue, sinon red............
   const blueCells = Array.from(document.querySelectorAll("[data-cell].blue"));
   const redCells = Array.from(document.querySelectorAll("[data-cell].red"));
- 
-  playSound(); 
+
+  playSound();
 
   // transforme le scale........................................................
 
@@ -141,15 +140,48 @@ function playGame(e) {
     gameState.innerHTML = "Blues wins!!";
     indexBlue++;
     blueScore.innerHTML = indexBlue;
+     cells.forEach((cell) => {
+      cell.removeEventListener("click", playGame);
+    });
+
+
+  // if (isBlueWinner === true) {
+  //   // Ajouter la classe 'blink' à chaque cellule de la combinaison gagnante
+  //   el.forEach((i) => cells[i].classList.add("blink"));
+
+  //    //   // Mettre à jour le score
+  //  indexBlue++;
+  //   blueScore.innerHTML = indexBlue;
+
+  //   // Afficher le message de victoire
+  //   gameState.innerHTML = "Blue wins!!";
+
+  //   // Clignoter la combinaison gagnante pendant 3 secondes
+  //   setInterval(() => {
+  //     stopBlinking();
+  //     setTimeout(() => {
+  //       el.forEach((i) => cells[i].classList.add("blink"));
+  //     }, 250);
+  //   }, 500);
+  //   setTimeout(() => {
+  //     stopBlinking();
+  //   }, 3000);
+
     console.log("ok");
   } else if (isRedWinner === true) {
     gameState.innerHTML = "Reds wins!!";
     indexRed++;
     redScore.innerHTML = indexRed;
+     cells.forEach((cell) => {
+       cell.removeEventListener("click", playGame);
+     });
   } else if (document.querySelectorAll(".cell:not(.blue):not(.red)").length === 0) {
     gameState.innerHTML = "Tie Game!!";
   }
 }
+
+
+
 
 // Enregistrement du plugin ScrollTrigger
 // gsap.registerPlugin(ScrollTrigger);
