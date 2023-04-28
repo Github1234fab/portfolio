@@ -8,6 +8,7 @@ html {
   cursor: none;
   background-color: #1d1d1d !important;
   height: 100vh;
+  width: 100vw;
 }
 
 /* CURSEUR PERSONNALISÉ..................................... */
@@ -64,6 +65,7 @@ html {
   grid-template-columns: 65% 35%;
   grid-template-rows: 40% 60%;
   height: 100vh;
+  width: 100%;
   position: relative;
 }
 
@@ -282,7 +284,6 @@ html {
 .about_h3 {
   margin-top: 20px;
   width: 90%;
-  /* font-size: 12px; */
   font-size: clamp(12px, 1vw, 14px);
   font-family: poppins;
   line-height: 25px;
@@ -307,9 +308,13 @@ html {
 
 /* MEDIAQUERIES.................................................................. */
 
-/* @media screen and (max-width: 695px) {
- .wrapper_nav {
-  margin-right: -10px;
+@media screen and (max-width: 640px){
+.main {
+  display: grid;
+  grid-template-columns: 90% 50%;
+  grid-template-rows: 40% 60%;
+  height: 100vh;
+  width: 100%;
+  position: relative;
 }
 }
-  */
