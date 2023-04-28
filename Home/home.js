@@ -203,6 +203,7 @@ const tm = gsap.timeline({ repeat: 2 });
 tm.add(
   gsap.to(".avion", {
     x: 80,
+
     duration: 2,
     ease: "none",
   })
@@ -210,7 +211,8 @@ tm.add(
   .add(
     gsap.to(".avion", {
       x: 120,
-      y: 60,
+      y: 50,
+   
       ease: "none",
       duration: 2,
     })

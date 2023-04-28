@@ -118,7 +118,7 @@ html {
 }
 .developper {
   font-family: poppins;
-  color: #7e7f9f;
+  color: #9a9bc3;
   font-weight: 100;
   transition: 0.2s ease-in-out;
   font-size: clamp(14px, 1vw, 20px);
@@ -266,7 +266,7 @@ html {
 }
 
 .contact_logo {
-  color: #6a6a7b;
+  color: #9898b1;
   transition: 0.1s ease-in-out;
   text-shadow: none;
   transform: scale(1);
