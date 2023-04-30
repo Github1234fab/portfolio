@@ -82,11 +82,11 @@ html {
   grid-column-end: 2;
 }
 
- .avion {
+.avion {
   height: 30px;
   width: 40px;
   margin-top: 30px;
-} 
+}
 
 .header_titles {
   display: flex;
@@ -266,7 +266,11 @@ html {
   background-image: linear-gradient(to top, #05024d, 20%, rgb(188, 186, 186));
   color: transparent;
 }
-
+.contact_logos {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
 .contact_logo {
   color: #9898b1;
   transition: 0.1s ease-in-out;
@@ -276,7 +280,7 @@ html {
   font-size: clamp(10px, 3vw, 20px);
 }
 .contact_logo:hover {
-  color: #6a6a7b;
+  color: #ffffff;
   /* text-shadow: 0px 0px 1px white; */
   transform: scale(1.2);
 }
@@ -291,7 +295,6 @@ html {
   color: rgb(210, 210, 210);
   text-align: left;
   transition: 1s ease-in-out;
-  
 }
 .container_nav {
   display: flex;
@@ -308,13 +311,13 @@ html {
 
 /* MEDIAQUERIES.................................................................. */
 
-@media screen and (max-width: 640px){
-.main {
-  display: grid;
-  grid-template-columns: 90% 50%;
-  grid-template-rows: 40% 60%;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-}
+@media screen and (max-width: 640px) {
+  .main {
+    display: grid;
+    grid-template-columns: 90% 50%;
+    grid-template-rows: 40% 60%;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
 }
