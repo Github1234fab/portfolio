@@ -12,7 +12,7 @@ document.addEventListener("click", () => {
 
   setTimeout(() => {
     cursor.classList.remove("cursor_animation");
-  }, 100);
+  }, 50);
 });
 
 //POSITION ET ANIMATION DU MENU..........................................
@@ -198,30 +198,48 @@ document.addEventListener("click", () => {
 //   repeat: -1,
 // });
 
-const tm = gsap.timeline({ repeat: 2 });
+// let name = document.querySelector("#name");
+// console.log(name);
+
+
+gsap.registerEase({
+  name: "customEase",
+  ease: function (t) {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  },
+});
+
+gsap.to(".header_title", {
+  delay: 2,
+  duration:6,
+  rotateX: 3600,
+  // repeat: 4,
+  // ease: "power4.inOut",
+  ease: "customEase",
+});
+
+const tm = gsap.timeline();
 
 tm.add(
   gsap.to(".avion", {
     x: 80,
-
-    duration: 2,
+    duration: 1,
     ease: "none",
   })
 )
   .add(
     gsap.to(".avion", {
-      x: 120,
-      y: 50,
-   
+      x: 145,
+      y: 40,
       ease: "none",
-      duration: 2,
+      duration: 1,
     })
   )
   .add(
     gsap.to(".avion", {
       x: 150,
       ease: "none",
-      duration: 0.76,
+      duration: 0,
     })
   )
   .add(
