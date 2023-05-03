@@ -137,15 +137,27 @@ html {
   height: 40px;
 }
 
-.logos:hover {
-  animation: bounce 0.5s ease-in;
+.technos:hover {
+  animation: bounce 0.7s ease-in;
 }
+/* .logos:hover {
+  animation: bounce 0.2s ease-in;
+} */
 @keyframes bounce {
   0% {
     transform: translateY(0);
   }
-  10% {
-    transform: translateY(-7px);
+  20% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  68% {
+    transform: translateY(-3px);
   }
   100% {
     transform: translateY(0px);
@@ -243,7 +255,6 @@ html {
    margin-left: 50px;
 }
 .wrapper_h2_logos {
-  gap: 20px;
   width: 100%;
   display: flex;
   /* flex-direction: column; */
@@ -268,10 +279,11 @@ html {
 .contact_logos {
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  width: 150px;
+  gap: 30px;
 }
 .contact_logo {
-  color:  #ecc8e4;
+  color: orange;
     /* color: linear-gradient(to top, #05024d, 20%, rgb(188, 186, 186)); */
   transition: 0.1s ease-in-out;
   text-shadow: none;

@@ -202,6 +202,18 @@ document.addEventListener("click", () => {
 // console.log(name);
 
 
+
+const avion = document.querySelector(".avion");
+const texte = document.querySelector(".header_title");
+
+
+const avionBounds = avion.getBoundingClientRect();
+const texteBounds = texte.getBoundingClientRect();
+
+const deltaX = texteBounds.left - avionBounds.left;
+const deltaY = texteBounds.top - 20 - avionBounds.top;
+
+
 gsap.registerEase({
   name: "customEase",
   ease: function (t) {
@@ -213,8 +225,6 @@ gsap.to(".header_title", {
   delay: 2,
   duration:6,
   rotateX: 3600,
-  // repeat: 4,
-  // ease: "power4.inOut",
   ease: "customEase",
 });
 
@@ -230,7 +240,7 @@ tm.add(
   .add(
     gsap.to(".avion", {
       x: 145,
-      y: 40,
+      y: deltaY,
       ease: "none",
       duration: 1,
     })
