@@ -18,7 +18,7 @@ html {
   width: 15px;
   border-radius: 50%;
   cursor: none;
-  border: solid 2px #7c7a97;
+  border: solid 2px orange;
   position: absolute;
   background-color: transparent;
   pointer-events: none;
@@ -92,14 +92,15 @@ html {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-left: 30px;
+  margin-left: 150px;
   justify-content: space-around;
 }
 .header_title {
   font-family: oswald;
   font-size: clamp(20px, 5vw, 30px);
   font-weight: 100;
-  color: #ffffff;margin-top: -10px;
+  color: #ffffff;
+  margin-top: -10px;
 }
 
 .header_name {
@@ -135,10 +136,13 @@ html {
   gap: 10px;
   margin-left: -10px;
   height: 40px;
+  transform: scale();
+  transition: 1s ease-in-out;
+  background-color: transparent;
 }
 
 .technos:hover {
-  animation: bounce 0.7s ease-in;
+  transform: scaleX(-1);
 }
 /* .logos:hover {
   animation: bounce 0.2s ease-in;
@@ -147,8 +151,8 @@ html {
   0% {
     transform: translateY(0);
   }
-  20% {
-    transform: translateY(-10px);
+  30% {
+    transform: translateY(-14px);
   }
   40% {
     transform: translateY(0px);
@@ -157,7 +161,7 @@ html {
     transform: translateY(-5px);
   }
   68% {
-    transform: translateY(-3px);
+    transform: translateY(-1px);
   }
   100% {
     transform: translateY(0px);
@@ -207,7 +211,7 @@ html {
   font-family: lato;
   font-weight: 400;
   font-size: clamp(14px, 1vw, 25px);
-  transition: .700s ease-in-out;
+  transition: 0.7s ease-in-out;
   text-transform: uppercase;
   transform: scale(1);
   padding: 10px;
@@ -217,9 +221,7 @@ html {
 }
 .nav_a:hover {
   color: rgb(255, 255, 255);
-  /* font-weight: 900; */
-  transform: scale(1.1);
-  background: linear-gradient(to right, transparent, 40%, #800808);
+  background: linear-gradient(to right, transparent, 20%, #800808);
 }
 .container_navButtons {
   display: flex;
@@ -250,9 +252,9 @@ html {
   grid-column-end: 2;
 }
 .container_about {
-  margin-top: 30px;
+  margin-top: 80px;
   height: 100%;
-   margin-left: 50px;
+  margin-left: 200px;
 }
 .wrapper_h2_logos {
   width: 100%;
@@ -284,17 +286,17 @@ html {
 }
 .contact_logo {
   color: orange;
-    /* color: linear-gradient(to top, #05024d, 20%, rgb(188, 186, 186)); */
   transition: 0.1s ease-in-out;
   text-shadow: none;
-  transform: scale(1);
+  transform: scale() rotate();
   z-index: 0;
-  font-size: clamp(10px, 3vw, 20px);
+  font-size: clamp(10px, 3vw, 30px);
 }
 .contact_logo:hover {
   color: #ffffff;
   /* text-shadow: 0px 0px 1px white; */
-  transform: scale(1.5);
+  transform: scale(1.5) rotate(3deg);
+  animation: bounce 0.6s;
 }
 
 .about_h3 {

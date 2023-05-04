@@ -211,7 +211,7 @@ const avionBounds = avion.getBoundingClientRect();
 const texteBounds = texte.getBoundingClientRect();
 
 const deltaX = texteBounds.left - avionBounds.left;
-const deltaY = texteBounds.top - 20 - avionBounds.top;
+const deltaY = texteBounds.top - 22 - avionBounds.top;
 
 
 gsap.registerEase({
@@ -222,7 +222,7 @@ gsap.registerEase({
 });
 
 gsap.to(".header_title", {
-  delay: 2,
+  delay: 3,
   duration:6,
   rotateX: 3600,
   ease: "customEase",
@@ -233,13 +233,13 @@ const tm = gsap.timeline();
 tm.add(
   gsap.to(".avion", {
     x: 80,
-    duration: 1,
+    duration: 2,
     ease: "none",
   })
 )
   .add(
     gsap.to(".avion", {
-      x: 145,
+      x: 155,
       y: deltaY,
       ease: "none",
       duration: 1,
@@ -255,24 +255,18 @@ tm.add(
   .add(
     gsap.to(".avion", {
       x: 240,
-      y: -70,
+      y: -80,
       ease: "none",
-      duration: 3,
+      duration: 1,
     })
   )
-  .add(
-    gsap.to(".avion", {
-      x: 274,
-      ease: "none",
-      duration: 0.75,
-    })
-  )
+ 
   .add(
     gsap.to(".avion", {
       x: 300,
       y: 123,
       ease: "none",
-      duration: 2,
+      duration: 1,
     })
   )
   .add(
@@ -280,22 +274,15 @@ tm.add(
       x: 390,
       y: 0,
       ease: "none",
-      duration: 2,
+      duration: 1,
     })
   )
   .add(
     gsap.to(".avion", {
-      x: 460,
-      y: 24,
+      x: 640,
+      y: -300,
       ease: "none",
-      duration: 2,
+      duration: 0.6,
     })
   )
-  .add(
-    gsap.to(".avion", {
-      x: 569,
-      y: -124,
-      ease: "none",
-      duration: 2,
-    })
-  );
+ 
