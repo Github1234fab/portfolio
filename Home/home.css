@@ -331,6 +331,14 @@ body {
   }
   .nav {
   gap: 20px;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: none;
+  }
+  .wrapper_nav{
+    height: 100%;
   }
   .about {
     display: flex;
@@ -363,5 +371,6 @@ body {
   transform: scale() rotate();
   z-index: 0;
   font-size: clamp(18px, 3vw, 20px);
+  margin: auto;
 }
 }

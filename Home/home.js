@@ -40,8 +40,14 @@ gsap.registerEase({
 let logoTech = document.querySelector(".technos");
 let titleHeader = document.querySelector(".header_title");
 
+let delay = 3.7;
+
+if (window.innerWidth < 768) {
+  delay = 0;
+}
+
 gsap.to(".header_title", {
-  delay: 3.7,
+  delay: delay,
   duration: 6,
   rotateX: 3600,
   ease: "customEase",
