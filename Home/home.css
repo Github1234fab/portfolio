@@ -310,7 +310,7 @@ body {
     flex-direction: column;
     /* width: 100%; */
   }
-  .header_title{
+  .header_title {
     letter-spacing: 3px;
   }
   .header_titles {
@@ -325,19 +325,19 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .technos{
+  .technos {
     height: 25px;
     margin: 10px;
   }
   .nav {
-  gap: 20px;
-   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 20px;
-  align-items: none;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: none;
   }
-  .wrapper_nav{
+  .wrapper_nav {
     height: 100%;
   }
   .about {
@@ -365,12 +365,14 @@ body {
     display: none;
   }
   .contact_logo {
-  color: rgb(255, 255, 255);
-  transition: 0.1s ease-in-out;
-  text-shadow: none;
-  transform: scale() rotate();
-  z-index: 0;
-  font-size: clamp(18px, 3vw, 20px);
-  margin: auto;
-}
+    color: rgb(255, 255, 255);
+    transition: 0.1s ease-in-out;
+    text-shadow: none;
+    transform: scale() rotate();
+    z-index: 0;
+    font-size: clamp(18px, 3vw, 20px);
+  }
+  .contact_logos {
+    /* margin: 20px 20px 10px 20px; */
+  }
 }
