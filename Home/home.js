@@ -15,7 +15,86 @@ document.addEventListener("click", () => {
   }, 50);
 });
 
-//POSITION ET ANIMATION DU MENU..........................................
+
+
+
+
+const avion = document.querySelector(".avion");
+const texte = document.querySelector(".header_title");
+
+
+const avionBounds = avion.getBoundingClientRect();
+const texteBounds = texte.getBoundingClientRect();
+
+const deltaX = texteBounds.left - avionBounds.left;
+const deltaY = texteBounds.top - 22 - avionBounds.top;
+
+
+gsap.registerEase({
+  name: "customEase",
+  ease: function (t) {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  },
+});
+ 
+let logoTech = document.querySelector(".technos");
+let titleHeader = document.querySelector(".header_title");
+
+gsap.to(".header_title", {
+  delay: 3.7,
+  duration: 6,
+  rotateX: 3600,
+  ease: "customEase",
+  onComplete: function () {
+    // la fonction suivante sera appelée lorsque l'animation sera terminée
+    document.querySelector(".header_title").style.color = "red";
+    if (titleHeader.style.color === "red") {
+      logoTech.style.transform = "scaleX(1)";
+    }
+
+  },
+});
+
+const tm = gsap.timeline();
+
+tm.add(
+  gsap.to(".avion", {
+    x: 100,
+    y: -150,
+    duration: 3,
+    ease: "none",
+    rotation: 20,
+  })
+)
+  .add(
+    gsap.to(".avion", {
+      x: 200,
+      y: deltaY,
+      ease: "none",
+      duration: 0.7,
+    })
+  )
+  .add(
+    gsap.to(".avion", {
+      x: 202,
+      ease: "none",
+      duration: 0,
+      rotation: -10,
+    })
+  )
+  .add(
+    gsap.to(".avion", {
+      x: 740,
+      y: -505,
+      // ease: "power4",
+      duration: 3,
+    })
+);
+  
+ 
+
+
+  //POSITION ET ANIMATION DU MENU..........................................
 
 // let up = document.querySelector(".up");
 // let down = document.querySelector(".down");
@@ -200,106 +279,3 @@ document.addEventListener("click", () => {
 
 // let name = document.querySelector("#name");
 // console.log(name);
-
-let logoTech = document.querySelector(".technos");
-let titleHeader = document.querySelector(".header_title");
-
-// logoTech.addEventListener("mouseover", () => {
-//   logoTech.style.transform = "scaleX(-1)";
-// })
-
-
-const avion = document.querySelector(".avion");
-const texte = document.querySelector(".header_title");
-
-
-const avionBounds = avion.getBoundingClientRect();
-const texteBounds = texte.getBoundingClientRect();
-
-const deltaX = texteBounds.left - avionBounds.left;
-const deltaY = texteBounds.top - 22 - avionBounds.top;
-
-
-gsap.registerEase({
-  name: "customEase",
-  ease: function (t) {
-    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-  },
-});
-
-gsap.to(".header_title", {
-  delay: 3.7,
-  duration: 6,
-  rotateX: 3600,
-  ease: "customEase",
-  onComplete: function () {
-    // la fonction suivante sera appelée lorsque l'animation sera terminée
-    document.querySelector(".header_title").style.color = "red";
-    if (titleHeader.style.color === "red") {
-      logoTech.style.transform = "scaleX(1)";
-    }
-
-  },
-});
-
-const tm = gsap.timeline();
-
-tm.add(
-  gsap.to(".avion", {
-    x: 100,
-    y: -150,
-    duration: 3,
-    ease: "none",
-    rotation: 20,
-  })
-)
-  .add(
-    gsap.to(".avion", {
-      x: 200,
-      y: deltaY,
-      ease: "none",
-      duration: 0.7,
-    })
-  )
-  .add(
-    gsap.to(".avion", {
-      x: 202,
-      ease: "none",
-      duration: 0,
-      rotation: -10,
-    })
-  )
-  .add(
-    gsap.to(".avion", {
-      x: 740,
-      y: -505,
-      // ease: "power4",
-      duration: 3,
-    })
-  );
- 
-  // .add(
-  //   gsap.to(".avion", {
-  //     x: 300,
-  //     y: 100,
-  //     ease: "none",
-  //     duration: 2,
-  //   })
-  // )
-  // .add(
-  //   gsap.to(".avion", {
-  //     x: 390,
-  //     y: 0,
-  //     ease: "none",
-  //     duration: 1,
-  //   })
-  // )
-  // .add(
-  //   gsap.to(".avion", {
-  //     x: 640,
-  //     y: -300,
-  //     ease: "none",
-  //     duration: 2,
-  //   })
-  // )
- 
