@@ -1,56 +1,64 @@
-body{
+body {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
-.home{
-    margin-top: 10px;
- border: none;
- background-color: transparent;
-   color: white;
-    text-shadow: 0px 0px 6px white;
-    transform: scale(1);
-    transition: .100s ease-in-out;
-    margin-bottom: 40px;
-    border: solid white 1px;
-    border-radius: 50%;
-    padding: 20px;
-    box-shadow: 0px 0px 6px white;
-    transform: scale(1);
-    margin-left: 220px;
+.calculator_buttons_actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
 }
-.home:hover{
+.home {
+  color: white;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  transform: scale(1);
+  transition: 0.1s ease-in-out;
+  border: solid white 4px;
+  box-shadow: 0px 0px 6px white;
+}
+.home:hover {
   transform: scale(1.2);
 }
-.animation_title{
+.animation_title {
   color: white;
-  font-family: chivo mono ;
+  font-family: chivo mono;
   text-shadow: 0px 0px 20px white;
   letter-spacing: -1px;
- font-weight: 900;
- margin-bottom: 30px;
-font-size: clamp(14px, 5vw, 22px);
+  font-weight: 900;
+  font-size: clamp(14px, 5vw, 22px);
+  margin-top: -20px;
 }
-.calculatrice{
-  margin-top: 40px;
+.calculatrice {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
 }
-.change_color_calculator{
-  margin-top: 14px;
- border: none;
- background-color: transparent;
-   color: white;
-    text-shadow: 0px 0px 6px white;
-    transform: scale(1);
-    transition: .100s ease-in-out;
+.change_color_calculator {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid white 4px;
+  background-color: transparent;
+  color: white;
+  transform: scale(1);
+  transition: 0.1s ease-in-out;
+  box-shadow: 0px 0px 6px white;
 }
-.change_color_calculator:hover{
-transform: scale(1.2);
+.change_color_calculator:hover {
+  transform: scale(1.2);
 }
+
 #calculator_container {
   display: flex;
   flex-direction: column;
@@ -66,16 +74,16 @@ transform: scale(1.2);
 
 #ecran {
   position: absolute;
-  left: 19px;
-  top: 15px;
+  left: 8px;
+  top: 14px;
   z-index: 2;
-  height: 80px;
+  height: 70px;
   width: 80%;
   background: linear-gradient(rgb(40, 39, 39), rgb(31, 39, 145));
   box-shadow: 1px 1px 2px 1px black;
   /* text-shadow: 0px 0px 20px white, 0px 0px 40px white; */
   color: rgb(238, 250, 5);
-  font-size: 15px;
+  font-size: 18px;
   text-align: right;
   font-family: oswald;
   text-shadow: 1px 1px 2px black;
@@ -118,9 +126,9 @@ transform: scale(1.2);
   background: linear-gradient(black, grey);
   box-shadow: 1px 1px 2px 1px black;
   font-family: chivo mono;
-  font-size: 9px;
+  font-size: 14px;
   transform: scale(1);
-  transition: .100s ease-in-out;
+  transition: 0.1s ease-in-out;
   text-shadow: 0px 0px 100px white;
 }
 .bouton:hover {
@@ -130,20 +138,20 @@ transform: scale(1.2);
   gap: 10px;
   background: linear-gradient(red, grey);
   box-shadow: 1px 1px 5px 1px black;
-    transform: scale(0.9);
-    text-shadow: 0px 0px 100px white;
+  transform: scale(0.9);
+  text-shadow: 0px 0px 100px white;
 }
 
 #egal {
   pointer-events: auto;
   color: white;
   gap: 10px;
- height: 30px;
+  height: 30px;
   width: 40px;
   background: linear-gradient(black, grey);
   box-shadow: 1px 1px 5px 1px black;
- font-family: chivo mono;
-  font-size: 9px;
+  font-family: chivo mono;
+  font-size: 14px;
 }
 
 #egal:hover {
@@ -154,20 +162,19 @@ transform: scale(1.2);
   pointer-events: auto;
   color: white;
   gap: 10px;
- height: 40px;
+  height: 40px;
   width: 100px;
   background: linear-gradient(black, grey);
   box-shadow: 1px 1px 5px 1px black;
-   font-family: chivo mono;
-  font-size: 9px;
+  font-family: chivo mono;
+  font-size: 14px;
   margin-top: 5px;
-    width: 100%;
+  width: 100%;
 }
 
 #initialize:hover {
   background: linear-gradient(yellow, grey);
   color: black;
-
 }
 
 #preresultat {
@@ -179,10 +186,138 @@ transform: scale(1.2);
   box-shadow: 1px 1px 5px 1px black;
   font-family: orbitron;
 }
-.technology{
+.technology {
   margin-top: 10px;
   font-size: 7px;
   font-family: chivo mono;
   color: white;
   text-shadow: 0px 0px 10px;
+}
+
+/* ................................................................................. */
+
+@media screen and (max-width: 768px) {
+  #calculator_container {
+    height: 350px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 30px;
+    border-radius: 20px;
+    pointer-events: none;
+    transition: linear-gradient 1s ease-in-out;
+  }
+  #container_calculatrice {
+    width: 270px;
+  }
+  #boutons {
+    width: 250px;
+  }
+  #container,
+  #container1,
+  #container2,
+  #container3,
+  #container4 {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .change_color_calculator {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: solid white 4px;
+    background-color: transparent;
+    color: white;
+    transform: scale(1);
+    transition: 0.1s ease-in-out;
+    box-shadow: 0px 0px 6px white;
+  }
+  .change_color_calculator:hover {
+    transform: scale(1.2);
+  }
+
+  .bouton {
+    pointer-events: auto;
+    color: white;
+    gap: 20px;
+    height: 40px;
+    width: 50px;
+    background: linear-gradient(black, grey);
+    box-shadow: 1px 1px 2px 1px black;
+    font-family: chivo mono;
+    font-size: 14px;
+    transform: scale(1);
+    transition: 0.1s ease-in-out;
+    text-shadow: 0px 0px 100px white;
+  }
+  #ecran {
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    z-index: 2;
+    height: 60px;
+    width: 80%;
+    background: linear-gradient(rgb(40, 39, 39), rgb(31, 39, 145));
+    box-shadow: 1px 1px 2px 1px black;
+    /* text-shadow: 0px 0px 20px white, 0px 0px 40px white; */
+    color: rgb(238, 250, 5);
+    font-size: 18px;
+    text-align: right;
+    font-family: oswald;
+    text-shadow: 1px 1px 2px black;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 100;
+  }
+  #egal {
+    pointer-events: auto;
+    color: white;
+    gap: 10px;
+    height: 40px;
+    width: 50px;
+    background: linear-gradient(black, grey);
+    box-shadow: 1px 1px 5px 1px black;
+    font-family: chivo mono;
+    font-size: 14px;
+  }
+  #initialize {
+    pointer-events: auto;
+    color: white;
+    gap: 10px;
+    height: 40px;
+
+    background: linear-gradient(black, grey);
+    box-shadow: 1px 1px 5px 1px black;
+    font-family: chivo mono;
+    font-size: 14px;
+    margin-top: 5px;
+    width: 80%;
+  }
+  .calculator_buttons_actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .home {
+    color: white;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    transform: scale(1);
+    transition: 0.1s ease-in-out;
+    border: solid white 4px;
+    box-shadow: 0px 0px 6px white;
+  }
 }

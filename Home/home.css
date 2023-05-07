@@ -342,6 +342,7 @@ body {
   }
   .about {
     display: flex;
+    justify-content: center;
   }
   .container_about {
     display: flex;
@@ -349,10 +350,10 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin: auto;
+    margin-left: 20px;
+      margin-right: 20px;
   }
   .about_h3 {
-    /* width: 100%; */
     font-size: clamp(14px, 1vw, 16px);
     font-family: poppins;
     line-height: 25px;
@@ -370,9 +371,14 @@ body {
     text-shadow: none;
     transform: scale() rotate();
     z-index: 0;
-    font-size: clamp(18px, 3vw, 20px);
+    font-size: clamp(16px, 3vw, 18px);
   }
   .contact_logos {
-    /* margin: 20px 20px 10px 20px; */
+    margin-top: 30px;
+    margin-left: ;
+  
+  }
+  .cursor {
+    visibility: hidden;
   }
 }
