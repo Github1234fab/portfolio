@@ -1,4 +1,4 @@
-body, html {
+body{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,27 +28,27 @@ body, html {
   justify-content: center;
   border-radius: 10px;
   border: none;
-  transform: scale(1);
-  transition: transform .200s ease-in-out;
+  transform: scale();
+  transition: transform 0.1s ease-in-out;
 }
 .start:hover,
 .stop:hover,
 .restart:hover {
   transform: scale(0.9);
 }
-.animation_buttons_actions{
+.animation_buttons_actions {
   display: flex;
   width: 240px;
   justify-content: space-around;
   margin-top: 20px;
 }
-.panorama_A{
-  margin-top: 50px;
+.panorama_A {
+  margin-top: 25px;
   width: 800px;
-  height: 505px;
+  height: 800px;
   background: linear-gradient(rgb(4, 26, 98), rgb(119, 119, 249));
   margin-left: 20px;
-   margin-right: 20px;
+  margin-right: 20px;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -252,31 +252,47 @@ body, html {
   font-size: 14px;
   color: white;
 }
-@media screen and (max-width: 810px){
-  body, html{
+@media screen and (max-width: 810px) {
+  body,
+  html {
     background: linear-gradient(transparent, transparent);
     background-color: #e6e3b8;
-
   }
 }
 
-
 @media screen and (max-width: 843px) {
-  body{
-  display: flex;
-  flex-direction: column;
-  align-items: none;
-  justify-content: none;
-  align-content: none;
-  background-color: whitesmoke;
-  height: 100vh;
-  width: 100vw;
-}
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: none;
+    justify-content: none;
+    align-content: none;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+  }
   .panorama_A {
-  margin-top: 200px;
+    margin-top: 200px;
+    width: 300px;
+    height: 505px;
+    background: linear-gradient(rgb(4, 26, 98), rgb(119, 119, 249));
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    /* box-shadow: 1px 1px 4px grey; */
+    border: white 3px solid;
+    box-shadow: 2px 2px 10px #f5caa4, -2px -2px 10px #9d6c41;
+  }
+
+  /* ********************************* */
+
+  .panorama_A {
+  margin-top: 25px;
   width: 300px;
-  height: 505px;
+  height: 2000px;
   background: linear-gradient(rgb(4, 26, 98), rgb(119, 119, 249));
+  margin-left: 20px;
+  margin-right: 20px;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -285,203 +301,200 @@ body, html {
   box-shadow: 2px 2px 10px #f5caa4, -2px -2px 10px #9d6c41;
 }
 
+  .fir {
+    height: 20px;
+    width: 10px;
+    color: #135841;
+    position: absolute;
+    z-index: 5;
+  }
+  .mountain {
+    width: 0px;
+    height: 0px;
+    border-top: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    z-index: 1;
+  }
+  .Amountain {
+    position: absolute;
+    top: 300px;
+    left: 120px;
+    border-bottom: 100px solid rgb(1, 6, 32);
+    opacity: 1;
+  }
+  .Bmountain {
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    border-bottom: 280px solid rgb(1, 6, 32);
+    opacity: 1;
+  }
+  .Cmountain {
+    position: absolute;
+    top: 240px;
+    left: 170px;
+    border-bottom: 380px solid rgb(1, 6, 32);
+    opacity: 1;
+  }
 
-/* ********************************* */
+  .snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
 
-.fir {
-  height: 20px;
-  width: 10px;
-  color: #135841;
-  position: absolute;
-  z-index: 5;
-}
-.mountain {
-  width: 0px;
-  height: 0px;
-  border-top: 100px solid transparent;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  z-index: 1;
-}
-.Amountain {
-  position: absolute;
-  top: 300px;
-  left: 120px;
-  border-bottom: 100px solid rgb(1, 6, 32);
-  opacity: 1;
-}
-.Bmountain {
-  position: absolute;
-  top: 120px;
-  left: 30px;
-  border-bottom: 280px solid rgb(1, 6, 32);
-  opacity: 1;
-}
-.Cmountain {
-  position: absolute;
-  top: 240px;
-  left: 170px;
-  border-bottom: 380px solid rgb(1, 6, 32);
-  opacity: 1;
-}
+  /* // class div, qui signifie pour chaque enfant de la div. */
+  .snowflakes div {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 4;
+  }
 
-.snowflakes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
+  .snowflake {
+    opacity: 0.4;
+  }
 
-/* // class div, qui signifie pour chaque enfant de la div. */
-.snowflakes div {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background-color: #fff;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 4;
-}
+  .snowflakeA {
+    opacity: 0.7;
+  }
 
-.snowflake {
-  opacity: 0.4;
-}
+  .snowflakeB {
+    opacity: 1;
+  }
 
-.snowflakeA {
-  opacity: 0.7;
-}
+  .car {
+    position: absolute;
+    top: 480px;
+    color: rgb(3, 41, 3);
+    z-index: 1;
+  }
+  .headlights {
+    color: yellow;
+    filter: blur(5px);
+    position: absolute;
+    top: 486px;
+    left: 22px;
+    transform: rotate(176deg);
+    z-index: 1;
+    scale: 1.7;
+  }
 
-.snowflakeB {
-  opacity: 1;
-}
+  .road {
+    height: 10px;
+    width: 100%;
+    background-color: rgb(44, 11, 11);
+    position: absolute;
+    top: 495px;
+    pointer-events: none;
+    z-index: 1;
+  }
 
-.car {
-  position: absolute;
-  top: 480px;
-  color: rgb(3, 41, 3);
-  z-index: 1;
-}
-.headlights {
-  color: yellow;
-  filter: blur(5px);
-  position: absolute;
-  top: 486px;
-  left: 22px;
-  transform: rotate(176deg);
-  z-index: 1;
-  scale: 1.7;
-}
+  .road div {
+    height: 7px;
+    width: 4px;
+    background-color: rgb(134, 43, 43);
+    position: absolute;
+    pointer-events: none;
+  }
 
-.road {
-  height: 10px;
-  width: 100%;
-  background-color: rgb(44, 11, 11);
-  position: absolute;
-  top: 495px;
-  pointer-events: none;
-  z-index: 1;
-}
+  .plane {
+    color: rgb(210, 50, 50);
+    position: absolute;
+    top: 350px;
+    left: -50px;
+    color: rgb(64, 64, 68);
+    z-index: 9999;
+  }
 
-.road div {
-  height: 7px;
-  width: 4px;
-  background-color: rgb(134, 43, 43);
-  position: absolute;
-  pointer-events: none;
-}
+  .sunCircle {
+    height: 300px;
+    width: 1000px;
+    border-radius: 50%;
+    position: absolute;
+    top: 360px;
+    left: -110px;
+  }
+  .sunCircle::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: linear-gradient(#f28c38, #b56523);
+    position: absolute;
+  }
+  .moonCircle {
+    height: 300px;
+    width: 600px;
+    border-radius: 50%;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    transform: rotate(60deg);
+    /* background-color: blue; */
+  }
+  .moonCircle::after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: linear-gradient(#f5f3ce, #e6e3b8);
+  }
 
-.plane {
-  color: rgb(210, 50, 50);
-  position: absolute;
-  top: 350px;
-  left: -50px;
-  color: rgb(64, 64, 68);
-  z-index: 9999;
-}
+  .tractor {
+    position: absolute;
+    top: 472px;
+    right: 0px;
+    left: 100%;
+    color: rgb(3, 40, 89);
+    z-index: 1;
+  }
 
-.sunCircle {
-  height: 300px;
-  width: 1000px;
-  border-radius: 50%;
-  position: absolute;
-  top: 360px;
-  left: -110px;
-}
-.sunCircle::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background: linear-gradient(#f28c38, #b56523);
-  position: absolute;
-}
-.moonCircle {
-  height: 300px;
-  width: 600px;
-  border-radius: 50%;
-  position: absolute;
-  top: 300px;
-  left: 300px;
-  transform: rotate(60deg);
-  /* background-color: blue; */
-}
-.moonCircle::after {
-  content: "";
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background: linear-gradient(#f5f3ce, #e6e3b8);
-}
+  .headlights_tractor {
+    color: rgb(173, 194, 243);
+    filter: blur(7px);
+    position: absolute;
+    top: 480px;
+    right: 5px;
+    rotate: -30 (deg);
+    /* left: 100%; */
+    transform: rotate(340deg);
+    z-index: 9999;
+    scale: 1.8;
+  }
 
-.tractor {
-  position: absolute;
-  top: 472px;
-  right: 0px;
-  left: 100%;
-  color: rgb(3, 40, 89);
-  z-index: 1;
-}
+  .ballLight_tractor {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: yellow;
+    filter: blur(4px);
+    position: absolute;
+    top: 455px;
+    right: -32px;
+    z-index: 9999;
+    scale: 1.4;
+  }
 
-.headlights_tractor {
-  color: rgb(173, 194, 243);
-  filter: blur(7px);
-  position: absolute;
-  top: 480px;
-  right: 5px;
-  rotate: -30 (deg);
-  /* left: 100%; */
-  transform: rotate(340deg);
-  z-index: 9999;
-  scale: 1.8;
-}
+  .clouds {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    z-index: 9999;
+    color: rgb(183, 179, 179);
+  }
 
-.ballLight_tractor {
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background-color: yellow;
-  filter: blur(4px);
-  position: absolute;
-  top: 455px;
-  right: -32px;
-  z-index: 9999;
-  scale: 1.4;
-}
-
-.clouds {
-  position: absolute;
-  top: 100px;
-  left: 10px;
-  z-index: 9999;
-  color: rgb(183, 179, 179);
-}
-
-.technology {
-  font-family: poppins;
-  font-size: 14px;
-  color: white;
-}
+  .technology {
+    font-family: poppins;
+    font-size: 14px;
+    color: white;
+  }
 }

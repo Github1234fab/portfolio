@@ -15,13 +15,8 @@ document.addEventListener("click", () => {
   }, 50);
 });
 
-
-
-
-
 const avion = document.querySelector(".avion");
 const texte = document.querySelector(".header_title");
-
 
 const avionBounds = avion.getBoundingClientRect();
 const texteBounds = texte.getBoundingClientRect();
@@ -29,14 +24,13 @@ const texteBounds = texte.getBoundingClientRect();
 const deltaX = texteBounds.left - avionBounds.left;
 const deltaY = texteBounds.top - 22 - avionBounds.top;
 
-
 gsap.registerEase({
   name: "customEase",
   ease: function (t) {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
   },
 });
- 
+
 let logoTech = document.querySelector(".technos");
 let titleHeader = document.querySelector(".header_title");
 
@@ -53,11 +47,14 @@ gsap.to(".header_title", {
   ease: "customEase",
   onComplete: function () {
     // la fonction suivante sera appelée lorsque l'animation sera terminée
-    document.querySelector(".header_title").style.color = "red";
-    if (titleHeader.style.color === "red") {
-      logoTech.style.transform = "scaleX(1)";
+    logoTech.style.transform = "scaleX(1)";
+    // document.querySelector(".header_title").style.color = "red";
+    if (logoTech.style.transform === "scaleX(1)") {
+      setTimeout(function () {
+        document.querySelector(".header_title").style.color = "red";
+        document.querySelector(".header_title").style.transition = "color .700s ease";
+      }, 3400);
     }
-
   },
 });
 
@@ -95,12 +92,9 @@ tm.add(
       // ease: "power4",
       duration: 3,
     })
-);
-  
- 
+  );
 
-
-  //POSITION ET ANIMATION DU MENU..........................................
+//POSITION ET ANIMATION DU MENU..........................................
 
 // let up = document.querySelector(".up");
 // let down = document.querySelector(".down");

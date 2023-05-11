@@ -116,7 +116,7 @@ body {
 }
 .developper {
   font-family: poppins;
-  color: #c0c1e7;
+  color: #ffffff;
   font-weight: 100;
   transition: 0.2s ease-in-out;
   font-size: clamp(14px, 1vw, 20px);
@@ -126,6 +126,7 @@ body {
   color: #cdb8b8;
 }
 .technos {
+  margin-top: 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -190,7 +191,8 @@ body {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  background: linear-gradient(to right, transparent, 40%, #373737);
+  /* background: linear-gradient(to right, transparent, 40%, #373737); */
+  background: linear-gradient(to right, transparent 20%, #373737, transparent 80%);
 }
 .nav_a:hover {
   color: rgb(255, 255, 255);
@@ -228,6 +230,7 @@ body {
 .container_about {
   height: 100%;
   margin-left: 150px;
+  margin-top: 10px;
 }
 .wrapper_h2_logos {
   width: 100%;
@@ -264,7 +267,7 @@ body {
   text-shadow: none;
   transform: scale() rotate();
   z-index: 0;
-  font-size: clamp(10px, 3vw, 20px);
+  font-size: clamp(10px, 3vw, 24px);
 }
 .contact_logo:hover {
   color: #ffffff;
@@ -312,6 +315,7 @@ body {
   }
   .header_title {
     letter-spacing: 3px;
+    font-size: 28px;
   }
   .header_titles {
     display: flex;
@@ -330,12 +334,13 @@ body {
     margin: 10px;
   }
   .nav {
-    gap: 20px;
+    gap: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 20px;
     align-items: none;
+    margin-top: 40px;
   }
   .wrapper_nav {
     height: 100%;
@@ -351,7 +356,7 @@ body {
     justify-content: center;
     padding: 20px;
     margin-left: 20px;
-      margin-right: 20px;
+    margin-right: 20px;
   }
   .about_h3 {
     font-size: clamp(14px, 1vw, 16px);
@@ -374,9 +379,9 @@ body {
     font-size: clamp(16px, 3vw, 18px);
   }
   .contact_logos {
-    margin-top: 30px;
-    margin-left: ;
-  
+    margin-top: 50px;
+    width: 100%;
+    justify-content: center;
   }
   .cursor {
     visibility: hidden;
