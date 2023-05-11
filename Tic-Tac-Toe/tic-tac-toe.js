@@ -27,17 +27,15 @@ reload.addEventListener("click", (el) => {
 
 //function éteindre le jeu et le rallumer......................................................
 
-let gameIsOn = false;
-
 function playSound() {
   const audio = new Audio("https://www.soundjay.com/button/button-3.mp3");
   audio.play();
 }
 
 power.addEventListener("click", () => {
-  gameIsOn = !gameIsOn;
-  power.style.color = gameIsOn ? "black" : "white";
-  power.style.textShadow = gameIsOn ? "none" : "0px 0px 6px white";
+  power.style.color = power.style.color === "white" ? "black" : "white";
+  power.style.textShadow = power.style.color === "black" ? "none" : "0px 0px 6px white";
+
   if (power.style.color === "white") {
     reload.classList.add("hidden_reload");
     gameState.classList.add("hidden_reload");
@@ -56,8 +54,8 @@ power.addEventListener("click", () => {
       cell.addEventListener("click", playGame, { once: true });
     });
   } else {
-    blueScore.innerHTML = "";
-    redScore.innerHTML = "";
+    indexBlue = 0;
+    indexRed = 0;
     reload.classList.remove("hidden_reload");
     gameState.classList.remove("hidden_reload");
     score.classList.remove("hidden_reload");
@@ -140,46 +138,19 @@ function playGame(e) {
     gameState.innerHTML = "Blues wins!!";
     indexBlue++;
     blueScore.innerHTML = indexBlue;
-     cells.forEach((cell) => {
+    cells.forEach((cell) => {
       cell.removeEventListener("click", playGame);
     });
-
-
-  // if (isBlueWinner === true) {
-  //   // Ajouter la classe 'blink' à chaque cellule de la combinaison gagnante
-  //   el.forEach((i) => cells[i].classList.add("blink"));
-
-  //    //   // Mettre à jour le score
-  //  indexBlue++;
-  //   blueScore.innerHTML = indexBlue;
-
-  //   // Afficher le message de victoire
-  //   gameState.innerHTML = "Blue wins!!";
-
-  //   // Clignoter la combinaison gagnante pendant 3 secondes
-  //   setInterval(() => {
-  //     stopBlinking();
-  //     setTimeout(() => {
-  //       el.forEach((i) => cells[i].classList.add("blink"));
-  //     }, 250);
-  //   }, 500);
-  //   setTimeout(() => {
-  //     stopBlinking();
-  //   }, 3000);
 
     console.log("ok");
   } else if (isRedWinner === true) {
     gameState.innerHTML = "Reds wins!!";
     indexRed++;
     redScore.innerHTML = indexRed;
-     cells.forEach((cell) => {
-       cell.removeEventListener("click", playGame);
-     });
+    cells.forEach((cell) => {
+      cell.removeEventListener("click", playGame);
+    });
   } else if (document.querySelectorAll(".cell:not(.blue):not(.red)").length === 0) {
     gameState.innerHTML = "Tie Game!!";
   }
 }
-
-
-
-
