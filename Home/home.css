@@ -376,7 +376,7 @@ body {
     text-shadow: none;
     transform: scale() rotate();
     z-index: 0;
-    font-size: clamp(16px, 3vw, 18px);
+    font-size: clamp(20px, 3vw, 22px);
   }
   .contact_logos {
     margin-top: 50px;

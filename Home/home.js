@@ -52,7 +52,7 @@ gsap.to(".header_title", {
     if (logoTech.style.transform === "scaleX(1)") {
       setTimeout(function () {
         document.querySelector(".header_title").style.color = "red";
-        document.querySelector(".header_title").style.transition = "color .700s ease";
+        document.querySelector(".header_title").style.transition = "color 1s ease";
       }, 3400);
     }
   },
